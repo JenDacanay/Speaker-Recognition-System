@@ -38,18 +38,25 @@ Triangle filters aren’t as effective as the theoretical rectangular bandpass, 
 <p align="center"> <img src="/img/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> </p>
 
 
-<p align="center"> <img src="/img/clusters_s4s8.jpg" width="511" height="420" alt="MFCC Clusters"> </p>
-
-
-
-### Test 5: 
+### Test 5:
+We inspect the acoustic space, MFCC vectors, and observe that that different speakers produce different sets of clusters.
 <p align="left">
-  <img src="/img/mfcc_space.jpg" width="411" height="320" alt="MFCC Clusters"> 
-  <img src="/img/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters"> 
+  <img src="/img/mfcc_space.jpg" width="511" height="420" alt="MFCC Space"> 
+  <img src="/img/clusters_s4s8.jpg" width="511" height="420" alt="MFCC Clusters">
 </p>
 <br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
+Are they in clusters? They are very much in clusters after the mfcc step, in this case 5 is mostly on the negative side where speaker 9 is mostly on the positive side for these two coefficients chosen
 
+### Test 6:
+The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
 
+### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
+
+<p align="center">
+  <img src="/img/results.jpg" width="511" height="420" alt="Test results"> 
+</p>
+<br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
+Perfect accuracy every time for 1-8, although for 9-11 they are all too close to 7 to be able to effectivly say no match. 9 is Maeia’s training data and 12-13 are Maeias test data, which it also gets right!
 ## Training
 
 ## Testing
