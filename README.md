@@ -58,7 +58,9 @@ The plot of VQ codewords was added to over the MFCC space vector to show the cen
 ### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
 
 <p align="center">
+  
 <div id="Human-Performance"></div>
+
 <div align= "center">
 <TABLE>
    <TR>
@@ -78,9 +80,11 @@ The plot of VQ codewords was added to over the MFCC space vector to show the cen
   </TR>
   </TABLE>
   </div>
-<br><i> Figure 5: Human Performance for Speaker Recognition</i>
-</p>
-
+  </p>
+  
+<p align="center">
+<i> Figure 5: Human Performance for Speaker Recognition</i>
+  </p>
 
 <p align="center">
   <img src="/img/results.jpg" width="411" height="320" alt="Test results"> 
@@ -94,10 +98,12 @@ Perfect accuracy every time for 1-8, although for 9-11 they are all too close to
   <img src="/img/results_notch1.jpg" alt="Notch Test results 1"> 
 <br><i> Figure 6:  Test results after 3 notch filters./i>
 </p>
-After 3 notch filters with Q factor of 20, the system succesfully recoginzes all speakers.
+After applying 3 notch filters with a Q factor of 20, the system succesfully recoginzes all speakers.
 
+
+<br>
 <p align="center">
   <img src="/img/results_notch2.jpg" alt="Notch Test results 2"> 
 <br><i> Figure 7: Test results after 6 notch filters. </i>
 </p>
-Adding 3 more notch filters with Q factor 10, results in a lower sucess rate.
+Applying 3 more notch filters with a Q factor of 10 results in a lower sucess rate.
