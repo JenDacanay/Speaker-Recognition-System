@@ -9,6 +9,12 @@ EEC 201 Final Project
 ## Training
 
 ## Testing
+
++ To execute the speaker recognition program:
+  1. Download src folder
+  2. Download Data folder into src folder
+  3. Run `finaldsp.m`
+
 ### Pre-emphasizing
 
 During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
