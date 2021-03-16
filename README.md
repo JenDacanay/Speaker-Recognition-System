@@ -42,30 +42,22 @@ Triangle filters aren’t as effective as the theoretical rectangular bandpass, 
 
 ### Test 5:
 We inspect the acoustic space, MFCC vectors, and observe that that different speakers produce different sets of clusters.
-<p align="left">
+<p align="center">
   <img src="/img/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
   <img src="/img/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
 <br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
-</p> <br>
+  </p>
+  
 Are they in clusters? They are very much in clusters after the MFCC step, in this case 4 is mostly on the negative side where speaker 8 is mostly on the positive side for these mfcc coefficients 9 and 19.
 
 ### Test 6:
 The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
 
+## Results
+
 ### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
 
 <p align="center">
-  <img src="/img/results.jpg" width="311" height="220" alt="Test results"> 
-</p>
-<br><i> Figure 5: Test Results with Original Data (Right)</i>
-Perfect accuracy every time for 1-8, although for 9-11 they are all too close to 7 to be able to effectivly say no match. 9 is Maeia’s training data and 12-13 are Maeias test data, which it also gets right!
-
-### Test 8: Use notch filters on the voice signals to generate another test set. Test your system on the accuracy after voice signals have passed different notch filters that may have suppressed distinct features of the original voice signal. Report the robustness of your system. 
-
-## Results
-
-<p align="center">
-  
 <div id="Human-Performance"></div>
 <div align= "center">
 <TABLE>
@@ -86,5 +78,15 @@ Perfect accuracy every time for 1-8, although for 9-11 they are all too close to
   </TR>
   </TABLE>
   </div>
-  
+<br><i> Figure 5: Human Performance for Speaker Recognition</i>
+</p>
+
+
 <p align="center">
+  <img src="/img/results.jpg" width="411" height="320" alt="Test results"> 
+<br><i> Figure 5: Test Results with Original Data</i>
+</p>
+Perfect accuracy every time for 1-8, although for 9-11 they are all too close to 7 to be able to effectivly say no match. 9 is Maeia’s training data and 12-13 are Maeias test data, which it also gets right!
+
+### Test 8: Use notch filters on the voice signals to generate another test set. Test your system on the accuracy after voice signals have passed different notch filters that may have suppressed distinct features of the original voice signal. Report the robustness of your system. 
+
