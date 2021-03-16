@@ -31,7 +31,7 @@ We generate periodograms using the short-time fourier transform and vary the fra
 Plot the mel-spaced filterbank responses. Compare them with theoretical responses. 
 
 <p align="center"> <img src="/img/melfilterbanks.jpg" alt="MFCC Clusters"> </p>
-<br><i> Figure 3: Mel Filter Bank Responses</i><br><br>
+<br><i> Figure 3: Mel-spaced Filter Bank Responses</i><br><br>
 
 Triangle filters aren’t as effective as the theoretical rectangular bandpass, however they work well enough for our purposes without adding extra complexity . 
 
@@ -39,10 +39,20 @@ Triangle filters aren’t as effective as the theoretical rectangular bandpass, 
 
 
 <p align="center"> <img src="/img/clusters_s4s8.jpg" width="511" height="420" alt="MFCC Clusters"> </p>
-<p align="center"> <img src="/img/mfcc_s5.jpg" width="511" height="420" alt="MFCC Clusters"> </p>
-### Training
 
-### Testing
+
+
+### Test 5: 
+<p align="left">
+  <img src="/img/mfcc_space.jpg" width="411" height="320" alt="MFCC Clusters"> 
+  <img src="/img/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters"> 
+</p>
+<br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
+
+
+## Training
+
+## Testing
 
 
 ## Results
