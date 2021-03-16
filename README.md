@@ -90,3 +90,14 @@ Perfect accuracy every time for 1-8, although for 9-11 they are all too close to
 
 ### Test 8: Use notch filters on the voice signals to generate another test set. Test your system on the accuracy after voice signals have passed different notch filters that may have suppressed distinct features of the original voice signal. Report the robustness of your system. 
 
+<p align="center">
+  <img src="/img/results_notch1.jpg" alt="Notch Test results 1"> 
+<br><i> Figure 6:  Test results after 3 notch filters./i>
+</p>
+After 3 notch filters with Q factor of 20, the system succesfully recoginzes all speakers.
+
+<p align="center">
+  <img src="/img/results_notch2.jpg" alt="Notch Test results 2"> 
+<br><i> Figure 7: Test results after 6 notch filters. </i>
+</p>
+Adding 3 more notch filters with Q factor 10, results in a lower sucess rate.
