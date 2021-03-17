@@ -6,6 +6,8 @@ EEC 201 Final Project
 ## Abstract
 
 ## Introduction
+
+
 ## Training
 
 ## Testing
@@ -17,65 +19,26 @@ EEC 201 Final Project
 
 ### Pre-emphasizing
 
+The sampling frequency was found to be 12.5 khz for every signal. This means that a 256 sample long frame is 20.5 ms long. The reccomended frame length, N, is anywhere from 20ms to 30 ms. We went ahead with N = 312, which equates to a 25 ms frame length. The frames are chosen to overlap by 60%.
+The figure above is the periodogram after taking the short time fourier transfrom(STFT). This plot visualizes both how the power of the signal is distributed over the frequency spectrum and how the that power shifts across time. We can see that the majority of the signal is contained in frequencies less than 4.5khz.
 During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
 
 <p align="center"> <img src="/img/s5_timedomain.JPG" alt="Time Domain s5.wav">
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
   
-### Test 2
-
-We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
-
-<p align="center"> 
-  <img src="/img/periodograms5.jpg" alt="Periodograms s5.wav"> 
-<br><i> Figure 2: Periodograms using STFT with different frame sizes..</i><br><br>
-</p>
-
-## Feature Extraction
-
-### Test 3: 
-Plot the mel-spaced filterbank responses. Compare them with theoretical responses. 
-
-<p align="center"> <img src="/img/melfilterbanks.jpg" alt="MFCC Clusters">
-<br><i> Figure 3: Mel-spaced Filter Bank Responses</i><br><br> </p>
-
-Triangle filters aren’t as effective as the theoretical rectangular bandpass, however they work well enough for our purposes without adding extra complexity. 
-
-##  MFCC
-
-Multiplying the raw spectrogram with the mel-spaced filter banks quantifies the smooth shape of the spectral envelope, this is important for identifying vowels. At the same time, it removed the fine spectral structure, which is less important in our application. It thus focuses on the most informative parts of the signal. Straightforward and 
-<p align="center"> <img src="/img/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> 
-<br><i> Figure 4: Spectrogram of Speech Segment from Speaker 5 Saying "zero" and the corresponding MFCCs.</i><br><br> </p>
-
-
-### Test 5:
-
-We inspect the acoustic space, MFCC vectors, and observe that that different speakers produce different sets of clusters.
-<p align="center">
-  <img src="/img/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
-  <img src="/img/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
-<br><i> Figure 5: MFCC Clusters and Centroids (Right)</i>
-  </p>
-  
-Are they in clusters? They are very much in clusters after the MFCC step, in this case 4 is mostly on the negative side where speaker 8 is mostly on the positive side for these mfcc coefficients 9 and 19.
-
-### Test 6:
-The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
-
-## Results
-
-### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
+### Test 1
+In this step, we established the human performance recognition rate as the benchmark to compare our speech recognition system to. We listened eleven speakers say "zero" in the  Training_Data folder, then played a random file in Test_Data folder and tried to identify each speaker. The results were recorded in Table 1 below:  
 
 <p align="center">
-  
+ 
 <div id="Human-Performance"></div>
 
 <div align= "center">
 <TABLE>
    <TR>
     <TD><b>Name</b></TD>
-     <TD><b>No. of Speakers Recognized</b></TD>
+     <TD><b>No. of Speakers Recognized Correctly</b></TD>
      <TD><b>Accuracy</b></TD> 
   </TR>
   <TR>
@@ -93,12 +56,56 @@ The plot of VQ codewords was added to over the MFCC space vector to show the cen
   </p>
   
 <p align="center">
-<i> Figure 6: Human Performance for Speaker Recognition</i>
+<i> Table 1: Human Performance for Speaker Recognition</i>
   </p>
+
+### Test 2
+
+We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
+
+<p align="center"> 
+  <img src="/img/periodograms5.jpg" alt="Periodograms s5.wav"> 
+<br><i> Figure 1: Periodograms using STFT with different frame sizes..</i><br><br>
+</p>
+
+## Feature Extraction
+
+### Test 3: 
+Plot the mel-spaced filterbank responses. Compare them with theoretical responses. 
+
+<p align="center"> <img src="/img/melfilterbanks.jpg" alt="MFCC Clusters">
+<br><i> Figure 2: Mel-spaced Filter Bank Responses</i><br><br> </p>
+
+Triangle filters aren’t as effective as the theoretical rectangular bandpass, however they work well enough for our purposes without adding extra complexity. 
+
+##  MFCC
+
+Multiplying the raw spectrogram with the mel-spaced filter banks quantifies the smooth shape of the spectral envelope, this is important for identifying vowels. At the same time, it removed the fine spectral structure, which is less important in our application. It thus focuses on the most informative parts of the signal. Straightforward and 
+<p align="center"> <img src="/img/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> 
+<br><i> Figure 3: Spectrogram of Speech Segment from Speaker 5 Saying "zero" and the corresponding MFCCs.</i><br><br> </p>
+
+
+### Test 5:
+
+We inspect the acoustic space, MFCC vectors, and observe that that different speakers produce different sets of clusters.
+<p align="center">
+  <img src="/img/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
+  <img src="/img/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
+<br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
+  </p>
+  
+Are they in clusters? They are very much in clusters after the MFCC step, in this case 4 is mostly on the negative side where speaker 8 is mostly on the positive side for these mfcc coefficients 9 and 19.
+
+### Test 6:
+The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
+
+## Results
+
+### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
 
 <p align="center">
   <img src="/img/results.jpg" width="411" height="320" alt="Test results"> 
-<br><i> Figure 7: Test Results with Original Data</i>
+<br><i> Figure 5: Test Results with Original Data</i>
 </p>
 Perfect accuracy every time for 1-8, although for 9-11 they are all too close to 7 to be able to effectivly say no match. 9 is Maeia’s training data and 12-13 are Maeias test data, which it also gets right!
 
@@ -106,7 +113,7 @@ Perfect accuracy every time for 1-8, although for 9-11 they are all too close to
 
 <p align="center">
   <img src="/img/results_notch1.jpg" alt="Notch Test results 1"> 
-<br><i> Figure 8:  Test results after 3 notch filters./i>
+<br><i> Figure 6:  Test results after 3 notch filters./i>
 </p>
 After applying 3 notch filters with a Q factor of 20, the system succesfully recoginzes all speakers.
 
@@ -114,6 +121,6 @@ After applying 3 notch filters with a Q factor of 20, the system succesfully rec
 <br>
 <p align="center">
   <img src="/img/results_notch2.jpg" alt="Notch Test results 2"> 
-<br><i> Figure 9: Test results after 6 notch filters. </i>
+<br><i> Figure 7: Test results after 6 notch filters. </i>
 </p>
 Applying 3 more notch filters with a Q factor of 10 results in a lower sucess rate.
