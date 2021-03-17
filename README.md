@@ -7,11 +7,6 @@ EEC 201 Final Project
 
 ## Introduction
 
-
-## Training
-
-## Testing
-
 + To execute the speaker recognition program:
   1. Download src folder
   2. Download Data folder into src folder
@@ -19,14 +14,16 @@ EEC 201 Final Project
 
 ### Pre-emphasizing
 
-The sampling frequency was found to be 12.5 khz for every signal. This means that a 256 sample long frame is 20.5 ms long. The reccomended frame length, N, is anywhere from 20ms to 30 ms. We went ahead with N = 312, which equates to a 25 ms frame length. The frames are chosen to overlap by 60%.
-The figure above is the periodogram after taking the short time fourier transfrom(STFT). This plot visualizes both how the power of the signal is distributed over the frequency spectrum and how the that power shifts across time. We can see that the majority of the signal is contained in frequencies less than 4.5khz.
-During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
-
+Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have a frame with 256 samples. 
 <p align="center"> <img src="/img/s5_timedomain.JPG" alt="Time Domain s5.wav">
+  
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
-  
+
+## Training
+
+## Testing
+
 ### Test 1
 In this step, we established the human performance recognition rate as the benchmark to compare our speech recognition system to. We listened eleven speakers say "zero" in the  Training_Data folder, then played a random file in Test_Data folder and tried to identify each speaker. The results were recorded in Table 1 below:  
 
@@ -68,6 +65,10 @@ We generate periodograms using the short-time fourier transform and vary the fra
 <br><i> Figure 1: Periodograms using STFT with different frame sizes..</i><br><br>
 </p>
 
+Since all signals had a frame length of 256 samples, we chose to use the frame length, N = 312 which equals 25 ms. This is between the reccomended range of 20 ms to 30 ms and gives a frame overlap of 60%. 
+Figure 1 shows the periodogram after taking the short-time fourier transfrom (STFT). The periodogram demonstrates how the power of the signal is distributed in the frequency range and over time. We see how the signal is mainly in the lower frequencies less than 4.5khz.
+
+During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
 ## Feature Extraction
 
 ### Test 3: 
