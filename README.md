@@ -5,16 +5,38 @@ EEC 201 Final Project
 
 ## Abstract
 
+This project demonstrates the use of digital signal processing to create a system that automatically recognizes a speaker through extracting unique voice features using MFCC and demonstrates the effectiveness of the LBG algorithm.  MFCC features of each speaker are calculated using the LBG algorithm, K-means clustering, which generates the codebook that initially starts with one centroid. The system first trains to recognize each speaker through creating a codebook and then is tested by determining which distance matches closest to each speaker. The system recognized speakers with 97.2% accuracy. 
+
 ## Introduction
+
+The system was created in Matlab
+
+
+## Procedure
+
+
+### Training
 
 + To execute the speaker recognition program:
   1. Download src folder
   2. Download Data folder into src folder
-  3. Run `finaldsp.m`
+  3. Run `identifyspeaker.m`
 
 ### Pre-emphasizing
 
-Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have a frame with 256 samples. 
+Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have a frame with 256 samples.
+
+To extract features for each speaker, each wav file contained a speaker saying “zero”
+1. Plot the voice signal in time domain
+2. Normalized the signal using audioread function and remove the noise by setting a threshold that removed any data lower than -30dB
+3. Plot the Mel spectrogram using short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal mel-frequency wrapping
+4. Plot MFCCs through discrete cosine transform (DCT) on the mel-spectrogram which removes its mean.
+5. Plot the MFCCs using mfcc function
+6. Perform vector quantization on the MFCCs, which generates codebooks for each speaker through K-means clustering by performing the LBG algorithm which utilizes the disteau function that calculates the euclidean distances between centroids and MFCCs 
+7. Each speaker is recognized by determining the smallest euclidean distance between each speaker.
+
+
+Each signal had a sampling frequency of 12.5 khz.
 <p align="center"> <img src="/img/s5_timedomain.JPG" alt="Time Domain s5.wav">
   
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
@@ -41,7 +63,7 @@ In this step, we established the human performance recognition rate as the bench
   <TR>
     <TD align="center">Jennifer</TD>
     <TD align="center">2 out of 9</TD>
-    <TD align="center">18%</TD> 
+    <TD align="center">22.2%</TD> 
   </TR>
     <TR>
     <TD align="center">Maiea</TD>
