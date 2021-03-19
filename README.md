@@ -31,7 +31,7 @@ Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have
 
 To extract features for each speaker, each wav file contained a speaker saying “zero”
 1. Plot the voice signal in time domain
-2. Normalized the signal using audioread function and remove the noise by setting a threshold that removed any data lower than -30dB
+2. Normalized the signal using audioread function and remove the noise by setting a threshold that removed any data lower than -30dB ( this is done to remove as much noise as possible from the equation) 
 3. Plot the Mel spectrogram using short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal mel-frequency wrapping
 4. Plot MFCCs through discrete cosine transform (DCT) on the mel-spectrogram which removes its mean.
 5. Plot the MFCCs using mfcc function
@@ -123,6 +123,7 @@ Are they in clusters? They are very much in clusters after the MFCC step, in thi
 
 ### Test 6:
 The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
+It was found that a window size of 256 a mel bank of 20 an overlap of 100 and 7 centroids was best for accuracy, this was found by randomly trying different combinations of the 4 values until one gave consistent correct results, this was the most stable of all the ones tried. 
 
 ## Results
 
