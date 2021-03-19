@@ -146,3 +146,45 @@ After applying 3 notch filters with a Q factor of 20, the system succesfully rec
 <br><i> Figure 7: Test results after 6 notch filters. </i>
 </p>
 Applying 3 more notch filters with a Q factor of 10 results in a lower sucess rate.
+
+### Test 9: 
+Test the system with other speech files you may find online. E.g. https://lionbridge.ai/datasets/best-speech-recognition-datasets-formachine-learning
+
+A dataset with 5 speakers and 1500 speech signals from live speeches of each speaker are included, some of these files are just noise and clapping, 1 file from each speaker that was seen as representative of the speakers voices were used to train the algorithm
+Speaker 1 23%
+Speaker 2 77%
+Speaker 3 37%
+Speaker 4 66%
+Speaker 5 99%
+Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses ( some significantly so.. )Despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few is very impressive
+
+
+
+
+## References 
+
+
+[1]     L.R. Rabiner and B.H. Juang, Fundamentals of Speech Recognition, Prentice-Hall, Englewood Cliffs, N.J., 1993.
+ 
+[2]     L.R Rabiner and R.W. Schafer, Digital Processing of Speech Signals, Prentice-Hall, Englewood Cliffs, N.J., 1978.
+ 
+[3]     S.B. Davis and P. Mermelstein, “Comparison of parametric representations for monosyllabic word recognition in continuously spoken sentences”, IEEE Transactions on Acoustics, Speech, Signal Processing, Vol. ASSP-28, No. 4, August 1980.
+ 
+[4]     Y. Linde, A. Buzo & R. Gray, “An algorithm for vector quantizer design”, IEEE Transactions on Communications, Vol. 28, pp.84-95, 1980.
+ 
+[5]     S. Furui, “Speaker independent isolated word recognition using dynamic features of speech spectrum”, IEEE Transactions on Acoustic, Speech, Signal Processing, Vol. ASSP-34, No. 1, pp. 52-59, February 1986.
+ 
+[6]     S. Furui, “An overview of speaker recognition technology”, ESCA Workshop on Automatic Speaker Recognition, Identification and Verification, pp. 1-9, 1994.
+ 
+[7]     F.K. Song, A.E. Rosenberg and B.H. Juang, “A vector quantisation approach to speaker recognition”, AT&T Technical Journal, Vol. 66-2, pp. 14-26, March 1987.
+ 
+[8]      comp.speech Frequently Asked Questions WWW site,http://svr-www.eng.cam.ac.uk/comp.speech/
+
+[9]     https://en.wikipedia.org/wiki/Euclidean_distance
+
+[10]    Henry degree and tony tsoi’s code for inspiration on the input cutting, which was necessary for program to operate accurately
+
+[11]    Matlab, for not telling figuring out till after the fact there are two different functions for euclidean distance rather than programing our own.
+
+[12]    https://www.kaggle.com/kongaevans/speaker-recognition-dataset?select=16000_pcm_speeches
+
