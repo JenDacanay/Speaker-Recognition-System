@@ -119,7 +119,7 @@ We inspect the acoustic space, MFCC vectors, and observe that that different spe
 <br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
   </p>
   
-Are they in clusters? They are very much in clusters after the MFCC step, in this case 4 is mostly on the negative side where speaker 8 is mostly on the positive side for these mfcc coefficients 9 and 19.
+Are they in clusters? They are very much in clusters after the MFCC step, in this case 4 is mostly on the negative side where speaker 8 is mostly on the positive side for these MFCCs 9 and 19.
 
 ### Test 6:
 The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
