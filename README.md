@@ -40,12 +40,12 @@ In this step, we established the human performance recognition rate as the bench
   </TR>
   <TR>
     <TD align="center">Jennifer</TD>
-    <TD align="center">2 out of 11</TD>
+    <TD align="center">2 out of 9</TD>
     <TD align="center">18%</TD> 
   </TR>
     <TR>
     <TD align="center">Maiea</TD>
-    <TD align="center">0 out of 11</TD>
+    <TD align="center">0 out of 9</TD>
     <TD align="center">0%</TD> 
   </TR>
   </TABLE>
@@ -65,8 +65,7 @@ We generate periodograms using the short-time fourier transform and vary the fra
 <br><i> Figure 1: Periodograms using STFT with different frame sizes..</i><br><br>
 </p>
 
-Since all signals had a frame length of 256 samples, we chose to use the frame length, N = 312 which equals 25 ms. This is between the reccomended range of 20 ms to 30 ms and gives a frame overlap of 60%. 
-Figure 1 shows the periodogram after taking the short-time fourier transfrom (STFT). The periodogram demonstrates how the power of the signal is distributed in the frequency range and over time. We see how the signal is mainly in the lower frequencies less than 4.5khz.
+
 
 During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
 ## Feature Extraction
