@@ -3,16 +3,18 @@
 #### Jennifer Dacanay, Maeia Reagle
 EEC 201 Final Project
 
-## Abstract
+## Introduction
 
 This project demonstrates the use of digital signal processing to create a system that automatically recognizes a speaker through extracting unique voice features using Mel frequency cepstral coefficients (MFCCs) and demonstrates the effectiveness of the LBG algorithm.  MFCC features of each speaker are calculated using the LBG algorithm, K-means clustering, which generates the codebook that initially starts with one centroid. The system first trains to recognize each speaker through creating a codebook and then is tested by determining which distance matches closest to each speaker. The system recognized speakers with 97.2% accuracy. 
 
-## Introduction
 
 MFCCs are computed through first computing the FFT power spectrum, applying a Mel-spaced filter-bank to obtain N energies. From the N energies, compute the discrete cosine transform (DCT) of log filter-bank energies resulting in the MFCCs (usually around 10, we chose 7 to be most efficient). The DCT is applied to filter-bank energies (FBEs) to decorrelate and obtain approximately uncorrelated MFCCs. 
 
 
-## Procedure
+## Method
+
+Fiter design hamming window
+algorithm design
 
 The system was created in Matlab
 
@@ -20,9 +22,6 @@ The system was created in Matlab
   1. Download src folder
   2. Download Data folder into src folder
   3. Run `identifyspeaker.m`
-
-### Training
-
 
 
 ### Pre-emphasizing
@@ -45,10 +44,13 @@ Each signal had a sampling frequency of 12.5 khz.
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
 
-## Training
 
-## Testing
 
+## Results
+
+3. Numerical Results: Present all the results required in the project. For each result, please include a brief description.
+4. Conclusion: Summarize your project, as well as any ideas or thinking you obtained from the project.
+5*. Attachment: Since the you have already upload the code on canvas, here you can briefly introduce how to implement your code. Another option is to combine this section with Section 2.
 ### Test 1
 In this step, we established the human performance recognition rate as the benchmark to compare our speech recognition system to. We listened eleven speakers say "zero" in the  Training_Data folder, then played a random file in Test_Data folder and tried to identify each speaker. The results were recorded in Table 1 below:  
 
