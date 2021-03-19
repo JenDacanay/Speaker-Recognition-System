@@ -145,7 +145,8 @@ After applying 3 notch filters with a Q factor of 20, the system succesfully rec
   <img src="/img/results_notch2.jpg" alt="Notch Test results 2"> 
 <br><i> Figure 7: Test results after 6 notch filters. </i>
 </p>
-Applying 3 more notch filters with a Q factor of 10 results in a lower sucess rate.
+
+Applying 3 additional notch filters with a Q factor of 10 resulted in a lower sucess rate.
 
 ### Test 9: 
 Test the system with other speech files you may find online. E.g. https://lionbridge.ai/datasets/best-speech-recognition-datasets-formachine-learning
