@@ -5,22 +5,25 @@ EEC 201 Final Project
 
 ## Abstract
 
-This project demonstrates the use of digital signal processing to create a system that automatically recognizes a speaker through extracting unique voice features using MFCC and demonstrates the effectiveness of the LBG algorithm.  MFCC features of each speaker are calculated using the LBG algorithm, K-means clustering, which generates the codebook that initially starts with one centroid. The system first trains to recognize each speaker through creating a codebook and then is tested by determining which distance matches closest to each speaker. The system recognized speakers with 97.2% accuracy. 
+This project demonstrates the use of digital signal processing to create a system that automatically recognizes a speaker through extracting unique voice features using Mel frequency cepstral coefficients (MFCCs) and demonstrates the effectiveness of the LBG algorithm.  MFCC features of each speaker are calculated using the LBG algorithm, K-means clustering, which generates the codebook that initially starts with one centroid. The system first trains to recognize each speaker through creating a codebook and then is tested by determining which distance matches closest to each speaker. The system recognized speakers with 97.2% accuracy. 
 
 ## Introduction
 
-The system was created in Matlab
+MFCCs are computed through first computing the FFT power spectrum, applying a Mel-spaced filter-bank to obtain N energies. From the N energies, compute the discrete cosine transform (DCT) of log filter-bank energies resulting in the MFCCs (usually around 10, we chose 7 to be most efficient). The DCT is applied to filter-bank energies (FBEs) to decorrelate and obtain approximately uncorrelated MFCCs. 
 
 
 ## Procedure
 
-
-### Training
+The system was created in Matlab
 
 + To execute the speaker recognition program:
   1. Download src folder
   2. Download Data folder into src folder
   3. Run `identifyspeaker.m`
+
+### Training
+
+
 
 ### Pre-emphasizing
 
