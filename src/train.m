@@ -4,7 +4,7 @@ function [code,cb,resval] = train(trainstring, n,win,mel,over,cent)
 % Input:
 %      trainstring : string name of directory contains all train sound
 %       files, train files must be lables s1 s2 s3 etc 
-%       n        : number of train files in traindir
+%       n        : number of train files in trainstring
 %       win      : Hamming window size 
 %       mel      : Number of Mel coeficients
 %       over     : Overlap size
