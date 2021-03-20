@@ -92,6 +92,7 @@ We generate periodograms using the short-time fourier transform and vary the fra
 
 <p align="center"> 
   <img src="/img/periodograms5.jpg" alt="Periodograms s5.wav"> 
+  <img src="/img/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
 <br><i> Figure 1: Periodograms using STFT with different frame sizes..</i><br><br>
 </p>
 
