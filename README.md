@@ -8,7 +8,7 @@
 ### Team: AudioVision  | Members: Jennifer Dacanay and Maeia Reagle
 ###### Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis 
 
-##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation and Jennifer has worked on improvements in pre-processing, data extraction, and plotting results. Jennifer implemented Github and the final report. Training, testing, analysis, and results were done simultaneously.</i>
+##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. 
 
 ## Introduction
 
@@ -87,14 +87,15 @@ The raw signal (top) for speaker voice shows there is a lot of data containing n
 This preprocessing step worked since our system produced a recognition rate of 73% which was well above our human benchmark rate established at 25%. However, after adding the additional test files for speakers 9 through 11, they tended to match with speaker 7 or 9. 
 
 
-We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
+We generated periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
 <p align="center"> 
-  <img src="/Images/periodograms5.jpg" alt="Periodograms s5.wav"> 
+  <img src="/Images/periodograms128.jpg" alt="Periodogram 128.wav"> 
+  <img src="/Images/periodograms256.jpg" alt="Periodogram 256.wav"> 
+  <img src="/Images/periodogram512.jpg" alt="Periodogram 512.wav"> 
   <img src="/Images/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
 <br><i> Figure 1: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
-
 
 ## Feature Extraction
 
@@ -164,10 +165,7 @@ Speaker 5 99%
 Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses ( some significantly so.. )Despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few is very impressive
 
 
-
-
 ## References 
-
 
 [1]     L.R. Rabiner and B.H. Juang, Fundamentals of Speech Recognition, Prentice-Hall, Englewood Cliffs, N.J., 1993.
  
