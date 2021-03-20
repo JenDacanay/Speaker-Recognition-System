@@ -1,5 +1,4 @@
-  
-function test(teststring, n, code,cb,win,mel,over,cent)
+function kc=test3(teststromg, n, code,cb,win,mel,over,cent)
 % Speaker Recognition: Testing Stage
 %
 % Input:
@@ -13,9 +12,9 @@ function test(teststring, n, code,cb,win,mel,over,cent)
 %
 % Example:
 %       >> test('C:\data\test\', 8, code);
-
+   kc=zeros(n,1);
 for k = 1:n                     % read test sound file of each speaker
-    file = sprintf('%ss%d.wav', teststring, k);
+    file = sprintf('%s%d.wav', teststromg, k);
     [s, fs] = audioread(file);      
 stemp = round(s, 3);  
 crit = abs(stemp) > db2mag(-30);
@@ -25,7 +24,7 @@ s = s(find(crit, 1, 'first'):find(crit, 1, 'last'));
     distmin = inf;
     initdis=distmin;
     k1 = 0;
-   
+
     for l = 1:length(code)      % each trained codebook, compute distortion
          code{1}(1,1);
         d = dista(v, code{l});
@@ -41,6 +40,7 @@ s = s(find(crit, 1, 'first'):find(crit, 1, 'last'));
    else
     msg = sprintf('Speaker %d matches with speaker %d', k, k1);
     disp(msg);
+    kc(k,1)=k1;
    end
 end
 

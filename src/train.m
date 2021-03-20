@@ -19,7 +19,7 @@ function [code,cb,resval] = train(trainstring, n,win,mel,over,cent)
 
 for i = 1:n                     % train a codebook for each speaker
     file = sprintf('%ss%d.wav', trainstring, i);     % put together filename           
-    disp(file); % disp filename for debugging 
+%     disp(file); % disp filename for debugging 
    
     [s, fs] = audioread(file); % read the file 
 stemp = round(s, 3);  % rounds everything to 3 sig figs

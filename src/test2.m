@@ -1,5 +1,4 @@
-  
-function test(teststring, n, code,cb,win,mel,over,cent)
+function test2(teststromg, n, code,cb,win,mel,over,cent)
 % Speaker Recognition: Testing Stage
 %
 % Input:
@@ -15,8 +14,40 @@ function test(teststring, n, code,cb,win,mel,over,cent)
 %       >> test('C:\data\test\', 8, code);
 
 for k = 1:n                     % read test sound file of each speaker
-    file = sprintf('%ss%d.wav', teststring, k);
+    file = sprintf('%ss%d.wav', teststromg, k);
     [s, fs] = audioread(file);      
+wo = .4*fs/(fs/2);  
+bw = wo/20;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .3*fs/(fs/2);  
+bw = wo/20;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .1*fs/(fs/2);  
+bw = wo/20;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .20*fs/(fs/2);  
+bw = wo/20;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .45*fs/(fs/2);  
+bw = wo/10;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .35*fs/(fs/2);  
+bw = wo/10;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .15*fs/(fs/2);  
+bw = wo/10;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
+wo = .25*fs/(fs/2);  
+bw = wo/10;
+[b,a] = iirnotch(wo,bw);
+s = filter(b,a,s);
 stemp = round(s, 3);  
 crit = abs(stemp) > db2mag(-30);
 s = s(find(crit, 1, 'first'):find(crit, 1, 'last')); 

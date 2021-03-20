@@ -1,6 +1,6 @@
 % Speaker Recognition System
 % EEC 201 Final Project
-% Team AudioVision: Maiea Reagle, Jennifer Dacanay
+% Team AudioVision: Maeia Reagle, Jennifer Dacanay
 clc; clear; close all;
 
 %% Read in raw signal data
@@ -30,6 +30,7 @@ s11=s11(:,1); % Removes stereo noises
 s12=s12(:,1); % Removes stereo noises
 [s13,Fs] = audioread('./Data/Training_Data/s13.wav');
 s13=s13(:,1); % Removes stereo noises
+
 %% Plot raw signals
 figure()
 n = 13
@@ -57,7 +58,8 @@ s9_fil = keepsound(s9, dB, 9);
 s10_fil = keepsound(s10, dB, 10); 
 s11_fil = keepsound(s11, dB, 11); 
 s12_fil = keepsound(s12, dB, 12); 
-s13_fil = keepsound(s13, dB, 13); 
+s13_fil = keepsound(s13, dB, 13);
+
 %% Plot all filtered signals
 figure()
 n = 13;
@@ -132,22 +134,22 @@ ov = 100;
 [cs5,yt5] = mfcc(s5_fil, Fs,nwin,nmfcc,ov)
 
 %% Apply mfcc to filtered speech files
-nwin = 256;
-nmfcc = 20;
-ov = 100;
-[cs1,yt1] = mfcc(s1_fil, Fs,nwin,nmfcc,ov)
-[cs2,yt2] = mfcc(s2_fil, Fs,nwin,nmfcc,ov)
-[cs3,yt3] = mfcc(s3_fil, Fs,nwin,nmfcc,ov)
-[cs4,yt4] = mfcc(s4_fil, Fs,nwin,nmfcc,ov)
-[cs5,yt5] = mfcc(s5_fil, Fs,nwin,nmfcc,ov)
-[cs6,yt6] = mfcc(s6_fil, Fs,nwin,nmfcc,ov)
-[cs7,yt7] = mfcc(s7_fil, Fs,nwin,nmfcc,ov)
-[cs8,yt8] = mfcc(s8_fil, Fs,nwin,nmfcc,ov)
-[cs9,yt9] = mfcc(s9_fil, Fs,nwin,nmfcc,ov)
-[cs10,yt10] = mfcc(s10_fil, Fs,nwin,nmfcc,ov)
-[cs11,yt11] = mfcc(s11_fil, Fs,nwin,nmfcc,ov)
-[cs12,yt12] = mfcc(s12_fil, Fs,nwin,nmfcc,ov)
-[cs13,yt13] = mfcc(s12_fil, Fs,nwin,nmfcc,ov)
+% nwin = 256;
+% nmfcc = 20;
+% ov = 100;
+% [cs1,yt1] = mfcc(s1_fil, Fs,nwin,nmfcc,ov)
+% [cs2,yt2] = mfcc(s2_fil, Fs,nwin,nmfcc,ov)
+% [cs3,yt3] = mfcc(s3_fil, Fs,nwin,nmfcc,ov)
+% [cs4,yt4] = mfcc(s4_fil, Fs,nwin,nmfcc,ov)
+% [cs5,yt5] = mfcc(s5_fil, Fs,nwin,nmfcc,ov)
+% [cs6,yt6] = mfcc(s6_fil, Fs,nwin,nmfcc,ov)
+% [cs7,yt7] = mfcc(s7_fil, Fs,nwin,nmfcc,ov)
+% [cs8,yt8] = mfcc(s8_fil, Fs,nwin,nmfcc,ov)
+% [cs9,yt9] = mfcc(s9_fil, Fs,nwin,nmfcc,ov)
+% [cs10,yt10] = mfcc(s10_fil, Fs,nwin,nmfcc,ov)
+% [cs11,yt11] = mfcc(s11_fil, Fs,nwin,nmfcc,ov)
+% [cs12,yt12] = mfcc(s12_fil, Fs,nwin,nmfcc,ov)
+% [cs13,yt13] = mfcc(s12_fil, Fs,nwin,nmfcc,ov)
 
 %%
 figure
