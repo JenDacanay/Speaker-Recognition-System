@@ -46,9 +46,6 @@ To extract features for each speaker, each wav file contained a speaker saying â
 In this step, we established the human performance recognition rate as the benchmark to compare our speech recognition system to. We listened eleven speakers say "zero" in the  Training_Data folder, then played a random file in Test_Data folder and tried to identify each speaker. The results were recorded in Table 1 below:  
 
 <p align="center">
- 
-<div id="Human-Performance"></div>
-
 <div align= "center">
 <TABLE>
    <TR>
@@ -69,10 +66,9 @@ In this step, we established the human performance recognition rate as the bench
   </TABLE>
   </div>
   </p>
-  
-<p align="center">
+<p align="center"> 
 <i> Table 1: Human Performance for Speaker Recognition</i>
-  </p>
+</p>
 
 ### Test 2
 
@@ -89,7 +85,7 @@ The raw signal (top) for speaker voice shows there is a lot of data containing n
 </p>
 
 <p align="center">
-  <img src="/Images/s10_timedomains" alt="Time Domain s10.wav">
+  <img src="/Images/s10_timedomains.jpg" alt="Time Domain s10.wav">
 <br><i> Figure 2: Raw and Filtered Signals in Time Domain for Speaker 10 .</i><br><br>
 </p>
 
@@ -102,7 +98,8 @@ We generate periodograms using the short-time fourier transform and vary the fra
 <br><i> Figure 1: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
 
-During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
+This preprocessing step worked well and produced a recognition rate of 88%, however, speakers 9 through 11 were always matching with speaker 7. The issue was found when we examined the signals in the time domain. Speakers 9, 10, and 11 had an extra stereo channel seen as orange Figure 2(a), then after we pre-processed it created two signals as shown in Figure 2 (b). After removing the extra signal during the preprocessing step, the recognition rate increased to 100% out of 20 test runs.
+
 ## Feature Extraction
 
 ### Test 3: 
