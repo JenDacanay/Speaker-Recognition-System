@@ -1,3 +1,7 @@
+<p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" alt="sound waves">
+  
+</p>
+
 # Speaker Recognition System
 ### Team: AudioVision  
 #### Jennifer Dacanay, Maeia Reagle
