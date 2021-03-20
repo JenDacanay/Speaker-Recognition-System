@@ -3,8 +3,8 @@ function test(teststring, n, code,cb,win,mel,over,cent)
 % Speaker Recognition: Testing Stage
 %
 % Input:
-%       testdir : string name of directory contains all test sound files
-%       n       : number of test files in testdir
+%       teststring : string name of directory contains all test sound files
+%       n       : number of test files in teststring
 %       code    : codebooks of all trained speakers
 %
 % Note:
