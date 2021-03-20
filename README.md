@@ -147,7 +147,7 @@ Perfect accuracy every time for 1-8, although for 9-11 they are all too close to
   <img src="/img/results_notch1.jpg" alt="Notch Test results 1"> 
 <br><i> Figure 6:  Test results after 3 notch filters./i>
 </p>
-After applying 3 notch filters with a Q factor of 20, the system succesfully recoginzes all speakers.
+After applying 3 notch filters with a Q factor of 20, the system succesfully recognizes all speakers.
 
 
 <br>
