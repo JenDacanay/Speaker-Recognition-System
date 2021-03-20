@@ -80,14 +80,19 @@ Preprocessing was done using audioread function that normalized the speech signa
 
 <p align="center">
   <img src="/Images/samplingrateresults.jpg" alt="sampling rate">
-  
-<br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
-</p>
+
+The raw signal (top) for speaker voice shows there is a lot of data containing no information which is the silence in the recording, in addition, without the audioread that normalized the signal, the amplitudes varied between each speaker. The bottom figures show the filtered signal after the preprocessing step that normalized the signal and removed data below -30 dB.  
 
 <p align="center">
   <img src="/Images/s5_timedomain.JPG" alt="Time Domain s5.wav">
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
+
+<p align="center">
+  <img src="/Images/s10_timedomains" alt="Time Domain s10.wav">
+<br><i> Figure 2: Raw and Filtered Signals in Time Domain for Speaker 10 .</i><br><br>
+</p>
+
 
 We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
