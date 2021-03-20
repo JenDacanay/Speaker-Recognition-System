@@ -77,17 +77,20 @@ Preprocessing was done using audioread function that normalized the speech signa
 <p align="center">
   <img src="/Images/samplingrateresults.jpg" alt="sampling rate">
 
-The raw signal (top) for speaker voice shows there is a lot of data containing no information which is the silence in the recording, in addition, without the audioread that normalized the signal, the amplitudes varied between each speaker. The bottom figures show the filtered signal after the preprocessing step that normalized the signal and removed data below -30 dB.  
-
 <p align="center">
   <img src="/Images/s5_timedomain.JPG" alt="Time Domain s5.wav">
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
 
+The raw signal (top) for speaker voice shows there is a lot of data containing no information which is the silence in the recording, in addition, without the audioread that normalized the signal, the amplitudes varied between each speaker. The bottom figures show the filtered signal after the preprocessing step that normalized the signal and removed data below -30 dB.  
+
 <p align="center">
-  <img src="/Images/s10_timedomains.jpg" alt="Time Domain s10.wav">
+  <img src="/Images/s10_timedomain1.jpg alt="Time Domain s10.wav">
+  <img src="/Images/s10_timedomain2.jpg alt="Time Domain s10.wav">
 <br><i> Figure 2: Raw and Filtered Signals in Time Domain for Speaker 10 .</i><br><br>
 </p>
+
+This preprocessing step worked well and produced a recognition rate of 88%, however, speakers 9 through 11 were always matching with speaker 7. The issue was found when we examined the signals in the time domain. Speakers 9, 10, and 11 had an extra stereo channel seen as orange Figure 2(a), then after we pre-processed it created two signals as shown in Figure 2 (b). After removing the extra signal during the preprocessing step, the recognition rate increased to 100% out of 20 test runs.
 
 
 We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
