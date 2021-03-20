@@ -3,24 +3,14 @@
 
 # Speaker Recognition System
 
-### Team: AudioVision  
+### Team: AudioVision  | Members: Jennifer Dacanay and Maeia Reagle
+###### Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis 
 
-#### Members: Jennifer Dacanay and Maeia Reagle
-
-Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis 
-
-###### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation and Jennifer has worked on improvements in pre-processing, data extraction, and plotting results. Jennifer implemented Github and the final report. Training, testing, analysis, and results were done simultaneously.</i>
-
-Introduction
-The goal of the project was to build a simple system that automatically recognizes a speaker through the use of digital signal processing tools. This was achieved using the text-dependent feature extraction method in MATLAB using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm to generate codewords (or centroids)  and the resulting vector-quantized codebook for each speaker. The system first trains to recognize each speaker through creating a VQ codebook. To recognize a speaker, the unknown voice signal is also vector-quantized and the system calculates the VQ distortion, which is the distance between a vector to the closest codeword of a codebook. The speaker is identified when the total VQ distortion is minimum. The system recognized speakers with 100% accuracy against the provided data set, 23% to 99% accuracy from an online database set, and stopped working after lower frequencies were cut off during notch filter testing. The results were all higher than our human performance recognition rate of 0% to 22% which demonstrates the speech recognition system works.
+##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation and Jennifer has worked on improvements in pre-processing, data extraction, and plotting results. Jennifer implemented Github and the final report. Training, testing, analysis, and results were done simultaneously.</i>
 
 ## Introduction
 
-This project demonstrates the use of digital signal processing to create a system that automatically recognizes a speaker through extracting unique voice features using Mel frequency cepstral coefficients (MFCCs) and demonstrates the effectiveness of the LBG algorithm.  MFCC features of each speaker are calculated using the LBG algorithm, K-means clustering, which generates the codebook that initially starts with one centroid. The system first trains to recognize each speaker through creating a codebook and then is tested by determining which distance matches closest to each speaker. The system recognized speakers with 97.2% accuracy. 
-
-
-MFCCs are computed through first computing the FFT power spectrum, applying a Mel-spaced filter-bank to obtain N energies. From the N energies, compute the discrete cosine transform (DCT) of log filter-bank energies resulting in the MFCCs (usually around 10, we chose 7 to be most efficient). The DCT is applied to filter-bank energies (FBEs) to decorrelate and obtain approximately uncorrelated MFCCs. 
-
+The goal of the project was to build a simple system that automatically recognizes a speaker through the use of digital signal processing tools. This was achieved using the text-dependent feature extraction method in MATLAB using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm to generate codewords (or centroids)  and the resulting vector-quantized codebook for each speaker. The system first trains to recognize each speaker through creating a VQ codebook. To recognize a speaker, the unknown voice signal is also vector-quantized and the system calculates the VQ distortion, which is the distance between a vector to the closest codeword of a codebook. The speaker is identified when the total VQ distortion is minimum. The system recognized speakers with 100% accuracy against the provided data set, 23% to 99% accuracy from an online database set, and stopped working after lower frequencies were cut off during notch filter testing. The results were all higher than our human performance recognition rate of 0% to 22% which demonstrates the speech recognition system works.
 
 ## Method
 
