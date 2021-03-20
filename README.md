@@ -1,4 +1,6 @@
-<p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" height = "500" alt="sound waves">
+
+<p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" height = 400" alt="sound waves">
+  
 </p>
 
 # Speaker Recognition System
@@ -31,27 +33,15 @@ Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have
 
 To extract features for each speaker, each wav file contained a speaker saying “zero”
 1. Plot the voice signal in time domain
-2. Normalized the signal using audioread function and remove the noise by setting a threshold that removed any data lower than -30dB ( this is done to remove as much noise as possible from the equation) 
+2. Normalized the signal using audioread function and remove the noise by setting a threshold that removed any data lower than -30dB.
 3. Plot the Mel spectrogram using short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal mel-frequency wrapping
 4. Plot MFCCs through discrete cosine transform (DCT) on the mel-spectrogram which removes its mean.
-5. Plot the MFCCs using mfcc function
-6. Perform vector quantization on the MFCCs, which generates codebooks for each speaker through K-means clustering by performing the LBG algorithm which utilizes the disteau function that calculates the euclidean distances between centroids and MFCCs 
-7. Each speaker is recognized by determining the smallest euclidean distance between each speaker.
-
-
-Each signal had a sampling frequency of 12.5 khz.
-<p align="center"> <img src="/img/s5_timedomain.JPG" alt="Time Domain s5.wav">
-  
-<br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
-</p>
-
-
+6. Plot the MFCCs using mfcc function
+7. Perform vector quantization on the MFCCs, which generates codebooks for each speaker through K-means clustering by performing the LBG algorithm which utilizes the disteau function that calculates the euclidean distances between centroids and MFCCs 
+8. Each speaker is recognized by determining the smallest euclidean distance between each speaker.
 
 ## Results
 
-3. Numerical Results: Present all the results required in the project. For each result, please include a brief description.
-4. Conclusion: Summarize your project, as well as any ideas or thinking you obtained from the project.
-5*. Attachment: Since the you have already upload the code on canvas, here you can briefly introduce how to implement your code. Another option is to combine this section with Section 2.
 ### Test 1
 In this step, we established the human performance recognition rate as the benchmark to compare our speech recognition system to. We listened eleven speakers say "zero" in the  Training_Data folder, then played a random file in Test_Data folder and tried to identify each speaker. The results were recorded in Table 1 below:  
 
@@ -86,6 +76,12 @@ In this step, we established the human performance recognition rate as the bench
 
 ### Test 2
 
+Each signal had a sampling frequency of 12.5 khz.
+<p align="center"> <img src="/img/s5_timedomain.JPG" alt="Time Domain s5.wav">
+  
+<br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
+</p>
+
 We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
 <p align="center"> 
@@ -93,8 +89,6 @@ We generate periodograms using the short-time fourier transform and vary the fra
   <img src="/img/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
 <br><i> Figure 1: Periodograms using STFT with different frame sizes..</i><br><br>
 </p>
-
-
 
 During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
 ## Feature Extraction
@@ -113,7 +107,6 @@ Multiplying the raw spectrogram with the mel-spaced filter banks quantifies the 
 <p align="center"> <img src="/img/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> 
 <br><i> Figure 3: Spectrogram of Speech Segment from Speaker 5 Saying "zero" and the corresponding MFCCs.</i><br><br> </p>
 
-
 ### Test 5:
 
 We inspect the acoustic space, MFCC vectors, and observe that that different speakers produce different sets of clusters.
@@ -128,8 +121,6 @@ Are they in clusters? They are very much in clusters after the MFCC step, in thi
 ### Test 6:
 The plot of VQ codewords was added to over the MFCC space vector to show the centroids.
 It was found that a window size of 256 a mel bank of 20 an overlap of 100 and 7 centroids was best for accuracy, this was found by randomly trying different combinations of the 4 values until one gave consistent correct results, this was the most stable of all the ones tried. 
-
-## Results
 
 ### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
 
