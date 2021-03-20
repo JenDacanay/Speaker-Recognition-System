@@ -1,5 +1,5 @@
 
-<p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" height = 400" alt="sound waves">
+<p align="center"> <img src="/Images/sound-waves-features.jpg" width = "1000" height = 400" alt="sound waves">
   
 </p>
 
@@ -76,18 +76,25 @@ In this step, we established the human performance recognition rate as the bench
 
 ### Test 2
 
-Each signal had a sampling frequency of 12.5 khz.
-<p align="center"> <img src="/img/s5_timedomain.JPG" alt="Time Domain s5.wav">
+Preprocessing was done using audioread function that normalized the speech signals and extracted the sampling rate to be 12.5 kHz . In a block of 256 samples, this converts to 20.5 ms of speech found.
+
+<p align="center">
+  <img src="/Images/samplingrateresults.jpg" alt="sampling rate">
   
+<br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
+</p>
+
+<p align="center">
+  <img src="/Images/s5_timedomain.JPG" alt="Time Domain s5.wav">
 <br><i> Figure 1: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
 
 We generate periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
 <p align="center"> 
-  <img src="/img/periodograms5.jpg" alt="Periodograms s5.wav"> 
-  <img src="/img/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
-<br><i> Figure 1: Periodograms using STFT with different frame sizes..</i><br><br>
+  <img src="/Images/periodograms5.jpg" alt="Periodograms s5.wav"> 
+  <img src="/Images/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
+<br><i> Figure 1: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
 
 During the first step of pre-processing, we remove the noise and silent parts of the speech signals. 
@@ -96,7 +103,7 @@ During the first step of pre-processing, we remove the noise and silent parts of
 ### Test 3: 
 Plot the mel-spaced filterbank responses. Compare them with theoretical responses. 
 
-<p align="center"> <img src="/img/melfilterbanks.jpg" alt="MFCC Clusters">
+<p align="center"> <img src="/Images/melfilterbanks.jpg" alt="MFCC Clusters">
 <br><i> Figure 2: Mel-spaced Filter Bank Responses</i><br><br> </p>
 
 Triangle filters aren’t as effective as the theoretical rectangular bandpass, however they work well enough for our purposes without adding extra complexity. 
@@ -104,15 +111,15 @@ Triangle filters aren’t as effective as the theoretical rectangular bandpass, 
 ##  MFCC
 
 Multiplying the raw spectrogram with the mel-spaced filter banks quantifies the smooth shape of the spectral envelope, this is important for identifying vowels. At the same time, it removed the fine spectral structure, which is less important in our application. It thus focuses on the most informative parts of the signal. Straightforward and 
-<p align="center"> <img src="/img/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> 
+<p align="center"> <img src="/Images/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> 
 <br><i> Figure 3: Spectrogram of Speech Segment from Speaker 5 Saying "zero" and the corresponding MFCCs.</i><br><br> </p>
 
 ### Test 5:
 
 We inspect the acoustic space, MFCC vectors, and observe that that different speakers produce different sets of clusters.
 <p align="center">
-  <img src="/img/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
-  <img src="/img/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
+  <img src="/Images/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
+  <img src="/Images/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
 <br><i> Figure 4: MFCC Clusters and Centroids (Right)</i>
   </p>
   
@@ -125,7 +132,7 @@ It was found that a window size of 256 a mel bank of 20 an overlap of 100 and 7 
 ### Test 7: Record the results. What is recognition rate our system can perform? Compare this with the human performance
 
 <p align="center">
-  <img src="/img/results.jpg" width="411" height="320" alt="Test results"> 
+  <img src="/Images/results.jpg" width="411" height="320" alt="Test results"> 
 <br><i> Figure 5: Test Results with Original Data</i>
 </p>
 Perfect accuracy every time for 1-8, although for 9-11 they are all too close to 7 to be able to effectivly say no match. 9 is Maeia’s training data and 12-13 are Maeias test data, which it also gets right!
@@ -133,7 +140,7 @@ Perfect accuracy every time for 1-8, although for 9-11 they are all too close to
 ### Test 8: Use notch filters on the voice signals to generate another test set. Test your system on the accuracy after voice signals have passed different notch filters that may have suppressed distinct features of the original voice signal. Report the robustness of your system. 
 
 <p align="center">
-  <img src="/img/results_notch1.jpg" alt="Notch Test results 1"> 
+  <img src="/Images/results_notch1.jpg" alt="Notch Test results 1"> 
 <br><i> Figure 6:  Test results after 3 notch filters./i>
 </p>
 After applying 3 notch filters with a Q factor of 20, the system succesfully recognizes all speakers.
@@ -141,7 +148,7 @@ After applying 3 notch filters with a Q factor of 20, the system succesfully rec
 
 <br>
 <p align="center">
-  <img src="/img/results_notch2.jpg" alt="Notch Test results 2"> 
+  <img src="/Images/results_notch2.jpg" alt="Notch Test results 2"> 
 <br><i> Figure 7: Test results after 6 notch filters. </i>
 </p>
 
