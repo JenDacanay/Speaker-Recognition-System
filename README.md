@@ -1,13 +1,14 @@
 <p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" height = "500" alt="sound waves">
 </p>
 
-<div align= "center">
 # Speaker Recognition System
+
 ### Team: AudioVision  
+
 #### Members: Jennifer Dacanay and Maeia Reagle
-</div>
 
 Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis 
+
 ###### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation and Jennifer has worked on improvements in pre-processing, data extraction, and plotting results. Jennifer implemented Github and the final report. Training, testing, analysis, and results were done simultaneously.</i>
 
 Introduction
