@@ -1,5 +1,4 @@
-<p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" alt="sound waves">
-  
+<p align="center"> <img src="/img/sound-waves-features.jpg" width = "1000" height = "500" alt="sound waves">
 </p>
 
 # Speaker Recognition System
