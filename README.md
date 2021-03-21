@@ -192,6 +192,7 @@ It was found that a window size of 256, a mel bank of 20, an overlap of 100, and
   <img src="/Images/results2.jpg" alt="Test results 2"> 
 <br><i> Figure 11: Test results against original data set, 100% recognition rate. </i>
 </p>
+
 In Figure 11, the results show perfect accuracy every time for speakers 1 through 8, although for 9 through 11, they are all too close to 7 to be able to effectively say no match. Speaker 9 is Maeia’s training data while speakers 12 through 13 are Maeia’s test data, which the system also identified correctly.
 
 ### Test 8
