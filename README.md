@@ -266,7 +266,7 @@ We achieved our goal to build a simple system that automatically recognized a sp
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w17wqGs69vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Future Work
+### Future Works
 
 Plans for future works include implementing the deep learning technique (DL) to test whether it improves the robustness of the speaker recognition system against noise and Other plans are to create a graphical user interface (GUI) and implement this system.
 
@@ -278,7 +278,7 @@ Plans for future works include implementing the deep learning technique (DL) to 
 
 + This project was the final project Digital Signal Processing course, EEC 201, at University of California, Davis.
 
-##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation while Jennifer worked on improvements in pre-processing, data extraction, plotting results, and adding noise to training data. Jennifer implemented Github and the final report. We collaborated throughout the whole process, so neither parts were done exclusively as we relied and helped each other when either of us ran into some issues.</i>
+##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation while Jennifer worked on improvements in pre-processing, data extraction, plotting results. Jennifer implemented Github and the final report. We collaborated throughout the whole process, so neither parts were done exclusively as we relied and helped each other when either of us ran into some issues.</i>
 
 ### References 
 
