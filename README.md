@@ -55,7 +55,7 @@ In this step, we established the human performance recognition rate as the bench
     <TD align="center">25%</TD> 
   </TR>
     <TR>
-    <TD align="center">Maiea</TD>
+    <TD align="center">Maeia</TD>
     <TD align="center">0 out of 8</TD>
     <TD align="center">0%</TD> 
   </TR>
