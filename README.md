@@ -202,24 +202,24 @@ To further test the robustness of our system, a dataset with 5 speakers and 1500
      <TD><b> Accuracy </b></TD>
   </TR>
   <TR>
-    <TD><b> Speaker 1 </b></TD>
-    <TD><b> 23% </b></TD>
+    <TD> Speaker 1 </TD>
+    <TD> 23% </TD>
   </TR>
   <TR>
-    <TD><b> Speaker 2 </b></TD>
-    <TD><b> 77% </b></TD>
+    <TD> Speaker 2 </TD>
+    <TD> 77% </TD>
   </TR>
   <TR>
-    <TD><b> Speaker 3 </b></TD>
-    <TD><b> 37% </b></TD>
+    <TD> Speaker 3 </TD>
+    <TD> 37% </TD>
   </TR>
   <TR>
-    <TD><b> Speaker 4 </b></TD>
-    <TD><b> 66% </b></TD>
+    <TD> Speaker 4 </TD>
+    <TD> 66% </TD>
   </TR>
   <TR>
-    <TD><b> Speaker 5 </b></TD>
-    <TD><b> 99% </b></TD>
+    <TD> Speaker 5 </TD>
+    <TD> 99% </TD>
   </TR>
   </TABLE>
   </div>
