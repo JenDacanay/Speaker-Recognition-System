@@ -164,7 +164,7 @@ We observed that the VQ codebooks for speaker 8 and speaker 4 are unique which w
 
 ### Test 7
 
-The preprocessing step worked since our system produced a recognition rate of 73% which was well above our human benchmark rate established at 25%. However, after adding the additional test files for speakers 9 through 11, they tended to match with speaker 7 or 9. It was found that a window size of 256, a mel bank of 20, an overlap of 100, and 7 centroids produced the most accurate results. This was determined through randomly trying different combinations of the 4 values until one gave consistent correct results, this was the most stable of all the ones tried. 
+The preprocessing step worked since our system produced a recognition rate of 73% which was well above our human benchmark rate established at 25%. However, after adding the additional test files for speakers 9 through 11, they tended to match with speaker 7, while Maeia's test signals 12 and 13 matched correctly with Speaker 9. It was found that a window size of 256, a mel bank of 20, an overlap of 100, and 7 centroids produced the most accurate results. This was determined through randomly trying different combinations of the 4 values until one gave consistent correct results, this was the most stable of all the ones tried. 
 
 <p align="center">
   <img src="/Images/results.jpg" alt="Test results"> 
