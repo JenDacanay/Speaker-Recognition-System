@@ -201,7 +201,7 @@ Notch filters were used on the voice signals to generate another test set. The a
 
 <p align="center">
   <img src="/Images/results_notch1.jpg" alt="Notch Test results 1"> 
-<br><i> Figure 12: Test results after 3 notch filters./i>
+<br><i> Figure 12: Test results after 3 notch filters. </i>
 </p>
    
 After applying 3 notch filters with a Q factor of 20, the system succesfully recognized all speakers.
@@ -225,6 +225,46 @@ Speaker 5 99%
 Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses ( some significantly so.. )Despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few is very impressive
 
 ## Conclusion
+
+We achieved our goal to build a simple system that automatically recognized a speaker through the use of digital signal processing tools. We were able to receive The system recognized speakers with 100% accuracy against the provided data set, 23% to 99% accuracy from an online database set, and stopped working after lower frequencies were cut off during notch filter testing. The results were all higher than our human performance recognition rate of 0% to 22% which demonstrates the speech recognition system works.
+
+<p align="center">
+<div align= "center">
+<TABLE>
+   <TR>
+    <TD><b> Speaker Recognition Test Performed </b></TD>
+     <TD><b> Accuracy </b></TD>
+  </TR>
+  <TR>
+    <TD align="center"> Human Performance </TD>
+    <TD align="center"> 0% - 22% </TD>
+  </TR>
+    <TR>
+    <TD align="center"> Provided Data Sets - 1 </TD>
+    <TD align="center"> 97% </TD>
+    <TR>
+    <TD align="center"> Additional Database </TD>
+    <TD align="center"> 23% - 99% </TD>
+  </TR>
+    <TR>
+    <TD align="center"> Notch Filtering </TD>
+    <TD align="center"> 6 filters with a factor of Q </TD>
+  </TR>
+    <TR>
+    <TD align="center"> Provided Data Sets - 2 </TD>
+    <TD align="center"> 100% </TD>
+  </TR>
+  </TR>
+  </TABLE>
+  </div>
+  </p>
+<p align="center"> 
+<i> Table 2: Summary of Test Results </i>
+</p>
+
+## Video Presentation
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w17wqGs69vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Future Work
 
@@ -263,5 +303,3 @@ Plans for future works include implementing the deep learning technique (DL) to 
 [10]    https://en.wikipedia.org/wiki/Euclidean_distance
 
 [11]    Henry degree and tony tsoi’s code for inspiration on the input cutting, which was necessary for program to operate accurately
-
-
