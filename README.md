@@ -1,20 +1,20 @@
 
 <p align="center"> <img src="/Images/sound-waves-features.jpg" width = "1000" height = 400" alt="sound waves">
-  
 </p>
 
-# Speaker Recognition System
+
+## Speaker Recognition System
 
 ### Team: AudioVision  | Members: Jennifer Dacanay and Maeia Reagle
-###### Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis 
+###### Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis
 
-##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. 
+##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. </i>
 
-## Introduction
+### Introduction
 
 The goal of the project was to build a simple system that automatically recognizes a speaker through the use of digital signal processing tools. This was achieved using the text-dependent feature extraction method in MATLAB using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm to generate codewords (or centroids)  and the resulting vector-quantized codebook for each speaker. The system first trains to recognize each speaker through creating a VQ codebook. To recognize a speaker, the unknown voice signal is also vector-quantized and the system calculates the VQ distortion, which is the distance between a vector to the closest codeword of a codebook. The speaker is identified when the total VQ distortion is minimum. The system recognized speakers with 100% accuracy against the provided data set, 23% to 99% accuracy from an online database set, and stopped working after lower frequencies were cut off during notch filter testing. The results were all higher than our human performance recognition rate of 0% to 25% which demonstrates the speech recognition system works.
 
-## Method
+### Method
 
 Fiter design hamming window
 algorithm design
@@ -27,7 +27,7 @@ The system was created in Matlab
   3. Run `identifyspeaker.m`
 
 
-### Pre-emphasizing
+#### Pre-emphasizing
 
 Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have a frame with 256 samples.
 
@@ -40,7 +40,7 @@ To extract features for each speaker, each wav file contained a speaker saying â
 7. Perform vector quantization on the MFCCs, which generates codebooks for each speaker through K-means clustering by performing the LBG algorithm which utilizes the disteau function that calculates the euclidean distances between centroids and MFCCs 
 8. Each speaker is recognized by determining the smallest euclidean distance between each speaker.
 
-## Results
+### Results
 
 ### Test 1
 In this step, we established the human performance recognition rate as the benchmark to compare our speech recognition system to. We listened eleven speakers say "zero" in the  Training_Data folder, then played a random file in Test_Data folder and tried to identify each speaker. The results were recorded in Table 1 below:  
@@ -90,9 +90,9 @@ This preprocessing step worked since our system produced a recognition rate of 7
 We generated periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
 <p align="center"> 
-  <img src="/Images/periodogram128.jpg" width="300" alt="Periodogram 128.wav"> 
-  <img src="/Images/periodogram256.jpg" width="300" alt="Periodogram 256.wav"> 
-  <img src="/Images/periodogram512.jpg" width="300" alt="Periodogram 512.wav"> 
+  <img src="/Images/periodogram128.jpg" width="411" height="320"  alt="Periodogram 128.wav"> 
+  <img src="/Images/periodogram256.jpg" width="411" height="320"  alt="Periodogram 256.wav"> 
+  <img src="/Images/periodogram512.jpg" width="411" height="320"  alt="Periodogram 512.wav"> 
   <img src="/Images/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
 <br><i> Figure 1: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
@@ -107,7 +107,7 @@ Plot the mel-spaced filterbank responses. Compare them with theoretical response
 
 Triangle filters arenâ€™t as effective as the theoretical rectangular bandpass, however they work well enough for our purposes without adding extra complexity. 
 
-##  MFCC
+###  MFCC
 
 Multiplying the raw spectrogram with the mel-spaced filter banks quantifies the smooth shape of the spectral envelope, this is important for identifying vowels. At the same time, it removed the fine spectral structure, which is less important in our application. It thus focuses on the most informative parts of the signal. Straightforward and 
 <p align="center"> <img src="/Images/spectrum_beforenafter_mel_s5.jpg" alt="Spectrogram s5.wav"> 
@@ -164,8 +164,7 @@ Speaker 4 66%
 Speaker 5 99%
 Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses ( some significantly so.. )Despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few is very impressive
 
-
-## References 
+### References 
 
 [1]     L.R. Rabiner and B.H. Juang, Fundamentals of Speech Recognition, Prentice-Hall, Englewood Cliffs, N.J., 1993.
  
