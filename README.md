@@ -90,9 +90,9 @@ This preprocessing step worked since our system produced a recognition rate of 7
 We generated periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
 <p align="center"> 
-  <img src="/Images/periodograms128.jpg" alt="Periodogram 128.wav"> 
-  <img src="/Images/periodograms256.jpg" alt="Periodogram 256.wav"> 
-  <img src="/Images/periodogram512.jpg" alt="Periodogram 512.wav"> 
+  <img src="/Images/periodogram128.jpg" width="300" alt="Periodogram 128.wav"> 
+  <img src="/Images/periodogram256.jpg" width="300" alt="Periodogram 256.wav"> 
+  <img src="/Images/periodogram512.jpg" width="300" alt="Periodogram 512.wav"> 
   <img src="/Images/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
 <br><i> Figure 1: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
