@@ -2,13 +2,10 @@
 <p align="center"> <img src="/Images/sound-waves-features.jpg" width = "1000" height = 400" alt="sound waves">
 </p>
 
-
 ## Speaker Recognition System
 
 ### Team: AudioVision  | Members: Jennifer Dacanay and Maeia Reagle
 ###### Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis
-
-##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. </i>
 
 ### Introduction
 
@@ -162,6 +159,10 @@ Speaker 3 37%
 Speaker 4 66%
 Speaker 5 99%
 Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses ( some significantly so.. )Despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few is very impressive
+
+
+##### <i> This final project was a result of the collaborative effort to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. </i>
+
 
 ### References 
 
