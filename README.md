@@ -215,17 +215,47 @@ Applying 3 additional notch filters with a Q factor of 10 resulted in a lower su
 
 ### Test 9
 
-A dataset with 5 speakers and 1500 speech signals from live speeches of each speaker are included, some of these files are just noise and clapping, 1 file from each speaker that was seen as representative of the speakers voices were used to train the algorithm
-Speaker 1 23%
-Speaker 2 77%
-Speaker 3 37%
-Speaker 4 66%
-Speaker 5 99%
-Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses ( some significantly so.. )Despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few is very impressive
+A dataset with 5 speakers and 1500 speech signals from live speeches of each speaker are included, some of these files are just noise and clapping, 1 file from each speaker that was seen as representative of the speakers voices were used to train the algorithm.
+
+<p align="center">
+<div align= "center">
+<TABLE>
+   <TR>
+    <TD><b> Speaker 1 </b></TD>
+     <TD><b> 23% </b></TD>
+  </TR>
+   <TR>
+    <TD><b> Speaker 2 </b></TD>
+     <TD><b> 77% </b></TD>
+  </TR>
+    <TR>
+    <TD><b> Speaker 3 </b></TD>
+    <TD><b> 37% </b></TD>
+    <TR>
+    <TD><b> Speaker 4 </b></TD>
+    <TD><b> 66% </b></TD>
+  </TR>
+    <TR>
+    <TD><b> Speaker 5 </b></TD>
+    <TD><b> 99% </b></TD>
+  </TR>
+    <TR>
+    <TD align="center"> Provided Data Sets - 2 </TD>
+    <TD align="center"> 100% </TD>
+  </TR>
+  </TR>
+  </TABLE>
+  </div>
+  </p>
+<p align="center"> 
+<i> Table 2: Summary of Results Using Online Database Set </i>
+</p>
+
+Considering the terrible quality of some of these voice captures, the fact that all of these are better than random guesses (some significantly so...) despite only one piece of training data is astonishing. The fact that it was better than random guessing in all the cases, and mostly correct in a few was very impressive.
 
 ## Conclusion
 
-We achieved our goal to build a simple system that automatically recognized a speaker through the use of digital signal processing tools. We were able to receive The system recognized speakers with 100% accuracy against the provided data set, 23% to 99% accuracy from an online database set, and stopped working after lower frequencies were cut off during notch filter testing. The results were all higher than our human performance recognition rate of 0% to 22% which demonstrates the speech recognition system works.
+We achieved our goal to build a simple system that automatically recognized a speaker through the use of digital signal processing tools and established a recognition rate of 100% accuracy against the provided data set. This was better than expected. Our test results are summarized in Table 3 below. The project has helped reinforce the tools we learned in our Digital Signal Processing course throughout the quarter. Being able to apply these through real-world applications was a fun opportunity. This brings to mind the possible applications where analyzing sounds for data analysis could be applied.  
 
 <p align="center">
 <div align= "center">
@@ -260,10 +290,6 @@ We achieved our goal to build a simple system that automatically recognized a sp
 <p align="center"> 
 <i> Table 2: Summary of Test Results </i>
 </p>
-
-## Video Presentation
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w17wqGs69vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Future Works
 
