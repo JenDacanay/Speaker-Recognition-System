@@ -198,6 +198,10 @@ To further test the robustness of our system, a dataset with 5 speakers and 1500
 <div align= "center">
 <TABLE>
    <TR>
+    <TD><b> Speaker </b></TD>
+     <TD><b> Accuracy </b></TD>
+  </TR>
+  <TR>
     <TD><b> Speaker 1 </b></TD>
     <TD><b> 23% </b></TD>
   </TR>
@@ -247,11 +251,12 @@ After we initially pre-processed signals 9 through 11, two signals were generate
 
 We achieved our goal to build a simple system that automatically recognized a speaker through the use of digital signal processing tools and established a recognition rate of 100% accuracy against the provided data set. This was better than expected. Our test results are summarized in Table 3 below. The project has helped reinforce the tools we learned in digital signal processing throughout the quarter. Being able to apply the concept through a real-world application was a fun opportunity. This brings to mind the possible applications where analyzing sounds for data analysis could be used in future products such as increased security checks with speech recognition or possibly analyzing sounds of animals to identify their species, for example.  
 
+
 <p align="center">
 <div align= "center">
 <TABLE>
    <TR>
-    <TD><b> Speaker Recognition Test Performed </b></TD>
+    <TD><b> Speaker Recognition Test Performed  </b></TD>
      <TD><b> Accuracy </b></TD>
   </TR>
   <TR>
