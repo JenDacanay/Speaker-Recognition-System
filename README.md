@@ -49,9 +49,9 @@ In this step, we established the human performance recognition rate as the bench
 <div align= "center">
 <TABLE>
    <TR>
-    <TD><b>Name</b></TD>
-     <TD><b>No. of Speakers Recognized Correctly</b></TD>
-     <TD><b>Accuracy</b></TD> 
+    <TD><b> Name </b></TD>
+     <TD><b> No. of Speakers Recognized Correctly </b></TD>
+     <TD><b> Accuracy </b></TD> 
   </TR>
   <TR>
     <TD align="center">Jennifer</TD>
@@ -199,20 +199,21 @@ To further test the robustness of our system, a dataset with 5 speakers and 1500
 <TABLE>
    <TR>
     <TD><b> Speaker 1 </b></TD>
-     <TD><b> 23% </b></TD>
+    <TD><b> 23% </b></TD>
   </TR>
-   <TR>
+  <TR>
     <TD><b> Speaker 2 </b></TD>
-     <TD><b> 77% </b></TD>
+    <TD><b> 77% </b></TD>
   </TR>
-    <TR>
+  <TR>
     <TD><b> Speaker 3 </b></TD>
     <TD><b> 37% </b></TD>
-    <TR>
+  </TR>
+  <TR>
     <TD><b> Speaker 4 </b></TD>
     <TD><b> 66% </b></TD>
   </TR>
-    <TR>
+  <TR>
     <TD><b> Speaker 5 </b></TD>
     <TD><b> 99% </b></TD>
   </TR>
@@ -239,7 +240,7 @@ After we initially pre-processed signals 9 through 11, two signals were generate
 
 <p align="center">
   <img src="/Images/results2.jpg" alt="Test results 2"> 
-<br><i> Figure 10: Test results against original data set, 100% recognition rate. </i>
+<br><i> Figure 13: Test results against original data set, 100% recognition rate. </i>
 </p>
 
 ## Conclusion
@@ -257,10 +258,10 @@ We achieved our goal to build a simple system that automatically recognized a sp
     <TD align="center"> Human Performance </TD>
     <TD align="center"> 0% - 22% </TD>
   </TR>
-    <TR>
+  <TR>
     <TD align="center"> Provided Data Sets - 1 </TD>
     <TD align="center"> 97% </TD>
-    <TR>
+  <TR>
     <TD align="center"> Additional Database </TD>
     <TD align="center"> 23% - 99% </TD>
   </TR>
@@ -272,7 +273,6 @@ We achieved our goal to build a simple system that automatically recognized a sp
     <TD align="center"> Provided Data Sets - 2 </TD>
     <TD align="center"> 100% </TD>
   </TR>
-  </TR>
   </TABLE>
   </div>
   </p>
@@ -280,9 +280,11 @@ We achieved our goal to build a simple system that automatically recognized a sp
 <i> Table 3: Summary of Test Results </i>
 </p>
 
+#### <i> This sytem was a result of a collaborative effort throughout the whole process to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. We collaborated throughout the whole process, so neither parts were done exclusively as we relied and helped each other when either of us ran into some issues. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation while Jennifer worked on improvements in pre-processing, plotting, Github, and final report. </i>
+
 ### Future Works
 
-Plans for future works include implementing the deep learning technique (DL) to test whether it improves the robustness of the speaker recognition system against noise, create a graphical user interface (GUI), and implement this system in Python.
+Plans for future works include implementation of the deep learning technique (DL) to test whether it will improve the robustness of the speaker recognition system against noise, creation of a graphical user interface (GUI), and system implementation in Python.
 
 ### Acknowledgements
 
@@ -291,8 +293,6 @@ Plans for future works include implementing the deep learning technique (DL) to 
 ### Appendix
 
 + This project was the final project for EEC 201, Digital Signal Processing at University of California, Davis.
-
-##### <i> All works was a collaborative effort throughout the whole process to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation while Jennifer worked on improvements in pre-processing, data extraction, and plotting. Jennifer implemented Github and the final report. </i>
 
 ### References 
 
@@ -304,7 +304,7 @@ Plans for future works include implementing the deep learning technique (DL) to 
  
 [4]     Y. Linde, A. Buzo & R. Gray, “An algorithm for vector quantizer design”, IEEE Transactions on Communications, Vol. 28, pp.84-95, 1980.
  
-[5]     S. Furui, “Speaker independent isolated word recognition using dynamic features of speech spectrum”, IEEE Transactions on Acoustic, Speech, Signal Processing, Vol.           ASSP-34, No. 1, pp. 52-59, February 1986.
+[5]     S. Furui, “Speaker independent isolated word recognition using dynamic features of speech spectrum”, IEEE Transactions on Acoustic, Speech, Signal Processing, Vol.               ASSP-34, No. 1, pp. 52-59, February 1986.
  
 [6]     S. Furui, “An overview of speaker recognition technology”, ESCA Workshop on Automatic Speaker Recognition, Identification and Verification, pp. 1-9, 1994.
  
