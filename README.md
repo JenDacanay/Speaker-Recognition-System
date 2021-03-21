@@ -72,7 +72,7 @@ In this step, we established the human performance recognition rate as the bench
 
 ## B. Speech Preprocessing
 
-## Test 2
+### Test 2
 
 Preprocessing was done using the audioread function in MATLAB which normalized the speech signals and determined the sampling rate to be 12.5 kHz.  In a block of 256 samples, this converts to 20.5 ms of speech found. The signals were plotted in time domain in Figure 1 below.
 
@@ -100,8 +100,7 @@ The discrepancy was found when we examined the signals in the time domain. Speak
 <p align="left">
   <img src="/Images/s10_timedomains.jpg" alt="Time Domain s10.wav">
 </p>
-<p align="center">
-<br><i> Figure 3: Raw and Filtered Signals in Time Domain for Speaker 10 .</i><br><br>
+<p align="center"> <i> Figure 3: Raw and Filtered Signals in Time Domain for Speaker 10 .</i><br><br>
 </p>
 
 After we initially pre-processed signals 9 through 11, two signals were generated as shown in Figure 3 (b). After removing the extra signal during the preprocessing step shown in Figure 3(c), the filtered signal was pre-processed with desired results, Figure 3 (d). Training with the signals in Figure 3(d) allowed the total VQ distortions to be calculated correctly, resulting in an increased recognition rate to 100% out of 30 test runs.
@@ -111,9 +110,9 @@ Next, we performed the short-time fourier transform on the signals by increasing
 We generated periodograms using the short-time fourier transform and vary the frame sizes. It can be observed in the figures, as the frame size increases, more noise is removed.
 
 <p align="center"> 
-  <img src="/Images/periodogram128.jpg" width="411" height="320"  alt="Periodogram 128.wav"> 
-  <img src="/Images/periodogram256.jpg" width="411" height="320"  alt="Periodogram 256.wav"> 
-  <img src="/Images/periodogram512.jpg" width="411" height="320"  alt="Periodogram 512.wav"> 
+  <img src="/Images/periodogram128.jpg" width="311" height="290"  alt="Periodogram 128.wav"> 
+  <img src="/Images/periodogram256.jpg" width="311" height="290"  alt="Periodogram 256.wav"> 
+  <img src="/Images/periodogram512.jpg" width="311" height="290"  alt="Periodogram 512.wav"> 
   <img src="/Images/stft2_s5.jpg" alt="Periodograms2 s5.wav"> 
 <br><i> Figure 4: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
@@ -151,11 +150,11 @@ The closwords.m function performs vector quantization through a clustering algor
 
 ### Test 5
 
-The resulting MFCC were plotted in a 2D plane for different speakers.
+The resulting MFCCs were plotted in a 2D plane for different speakers.
 
 <p align="center">
-  <img src="/Images/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
-  <img src="/Images/mfcc_space3.jpg" width="411" height="320" alt="MFCC Clusters">
+  <img src="/Images/mfcc_space.jpg" width="411" height="411" alt="MFCC Space"> 
+  <img src="/Images/mfcc_space3.jpg" width="500" height="500" alt="MFCC Space ">
 <br><i> Figure 8: MFCC Clusters </i>
   </p>
   
@@ -169,7 +168,7 @@ The resulting VQ centroids (codewords) were plotted over the same MFCC 9 and 19 
 
 <p align="center">
   <img src="/Images/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
-  <img src="/Images/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
+  <img src="/Images/clusters_s4s8.jpg" width="311" height="320" alt="MFCC Clusters">
 <br><i> Figure 9: MFCC clusters (left) and centroids (right) </i>
   </p>
   
