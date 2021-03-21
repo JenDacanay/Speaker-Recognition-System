@@ -163,7 +163,7 @@ We inspected the acoustic space by plotting the 2 different MFCC vectors and obs
 
 Dothelifting.m function is called as such because it does the vast majority of the work. It generates the codebook and closest centroid (codeword) for each point for each speaker given as input, cs, and does so for k centroids. It also returns the final distance value for debugging purposes. It first places random centroids and sets a target change in residual value. Then the code itterates by first finding the closest centroids to each point by calling the closwords.m function.
 
-### Test 6:
+### Test 6
 
 The resulting VQ centroids (codewords) were plotted over the same MFCC 9 and 19 clusters in Figure 9 below.
 
