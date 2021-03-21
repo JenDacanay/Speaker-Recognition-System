@@ -154,7 +154,7 @@ The resulting MFCCs were plotted in a 2D plane for different speakers.
 
 <p align="center">
   <img src="/Images/mfcc_space.jpg" width="411" height="411" alt="MFCC Space"> 
-  <img src="/Images/mfcc_space3.jpg" width="500" height="500" alt="MFCC Space ">
+  <img src="/Images/mfcc_space3.jpg" width="450" height="450"  alt="MFCC Space ">
 <br><i> Figure 8: MFCC Clusters </i>
   </p>
   
@@ -168,7 +168,7 @@ The resulting VQ centroids (codewords) were plotted over the same MFCC 9 and 19 
 
 <p align="center">
   <img src="/Images/mfcc_space.jpg" width="411" height="320" alt="MFCC Space"> 
-  <img src="/Images/clusters_s4s8.jpg" width="311" height="320" alt="MFCC Clusters">
+  <img src="/Images/clusters_s4s8.jpg" width="411" height="320" alt="MFCC Clusters">
 <br><i> Figure 9: MFCC clusters (left) and centroids (right) </i>
   </p>
   
@@ -183,7 +183,7 @@ Initially, our system recognition rate was initially 73% which is higher than ou
 It was found that a window size of 256, a mel bank of 20, an overlap of 100, and 7 centroids produced the most accurate results. This was found by randomly trying different combinations of the 4 values until one gave consistent correct results, this was the most stable of all the ones tried. 
 
 <p align="center">
-  <img src="/Images/results.jpg" width="411" height="320" alt="Test results"> 
+  <img src="/Images/results.jpg" alt="Test results"> 
 <br><i> Figure 10: Test results against original data set, 73% recognition rate. </i>
 </p>
 
