@@ -16,29 +16,28 @@ The goal of the project was to build a simple system that automatically recogniz
 
 ### Method
 
-Fiter design hamming window
-algorithm design
-
-The system was created in Matlab
-
-+ To execute the speaker recognition program:
-  1. Download src folder
-  2. Download Data folder into src folder
-  3. Run `identifyspeaker.m`
+We performed the text-dependent feature extraction method which works best when the training data set has each speaker utter the same word. In our case, both the training and test sets each speaker was saying “zero”. The steps to implement and test our system consisted of three parts, preprocessing, training, and testing.
 
 
-#### Pre-emphasizing
+#### Preprocessing
 
-Each signal had a sampling frequency of 12.5 khz, therefore 20.5 ms of will have a frame with 256 samples.
+1. Plot the voice signal in time domain.
+2. Normalized the signal using audioread function and removed the noise by setting a threshold that removed any data lower than -30dB.
 
-To extract features for each speaker, each wav file contained a speaker saying “zero”
-1. Plot the voice signal in time domain
-2. Normalized the signal using audioread function and remove the noise by setting a threshold that removed any data lower than -30dB.
-3. Plot the Mel spectrogram using short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal mel-frequency wrapping
+#### Training
+
+3. Plot the Mel-spectrogram after calculating its short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal 4. using mel-frequency wrapping.
 4. Plot MFCCs through discrete cosine transform (DCT) on the mel-spectrogram which removes its mean.
-6. Plot the MFCCs using mfcc function
-7. Perform vector quantization on the MFCCs, which generates codebooks for each speaker through K-means clustering by performing the LBG algorithm which utilizes the disteau function that calculates the euclidean distances between centroids and MFCCs 
-8. Each speaker is recognized by determining the smallest euclidean distance between each speaker.
+5. Plot the MFCCs using mfcc.m function
+6. Performed vector quantization on the MFCCs, which generated codebooks for each speaker through VQ by performing the LBG algorithm. The LBG algorithm calculates the euclidean distances between centroids and MFCC.
+Testing
+7. Each speaker was recognized by compaing the total smallest euclidean distance between each speaker to find a match.
+
+### Implementation
+
+This speaker recognition system was created in Matlab. To execute the speaker recognition program:
+1. Download src folder
+2. Run identifyspeaker.m
 
 ### Results
 
