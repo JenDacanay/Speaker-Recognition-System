@@ -18,11 +18,11 @@ We performed the text-dependent feature extraction method which works best when 
 ## Preprocessing
 
 1. Plot the voice signal in time domain.
-2. Normalized the signal using audioread function and removed the noise by setting a threshold that removed any data lower than -30dB.
+2. Normalized the signal using audioread function and removed the noise by setting a threshold that removed any data lower than -30 dB.
 
 ## Training
 
-3. Plot the Mel-spectrogram after calculating its short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal 4. using mel-frequency wrapping.
+3. Plot the Mel-spectrogram after calculating its short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal using mel-frequency wrapping.
 4. Plot MFCCs through discrete cosine transform (DCT) on the mel-spectrogram which removes its mean.
 5. Plot the MFCCs using mfcc.m function
 6. Performed vector quantization on the MFCCs, which generated codebooks for each speaker through VQ by performing the LBG algorithm. The LBG algorithm calculates the euclidean distances between centroids and MFCC.
