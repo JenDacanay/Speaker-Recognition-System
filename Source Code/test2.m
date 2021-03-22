@@ -1,5 +1,5 @@
 function test2(teststromg, n, code,cb,win,mel,over,cent)
-% Speaker Recognition: Testing Stage
+% Speaker Recognition: Testing Stage, THIS TEST HAS THE NOTCH FILTERS 
 %
 % Input:
 %       testdir : string name of directory contains all test sound files
