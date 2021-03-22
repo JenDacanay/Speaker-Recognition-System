@@ -74,7 +74,7 @@ In this step, we established the human performance recognition rate as the bench
 
 ### Test 2
 
-Preprocessing was done using the audioread function in MATLAB which normalized the speech signals and determined the sampling rate to be 12.5 kHz.  In a block of 256 samples, this converts to 20.5 ms of speech found. The raw, unnormalized signals were plotted in time domain in Figure 1 below.
+Preprocessing was done using the audioread function in MATLAB which normalized the speech signals and determined the sampling rate to be 12.5 kHz.  In a block of 256 samples, this converts to 20.5 ms of speech found. The signals were plotted in time domain in Figure 1 below.
 
 <p align="center">
   <img src="/Images/samplingrateresults.jpg" alt="sampling rate">
