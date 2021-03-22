@@ -91,7 +91,7 @@ Preprocessing was done using the audioread function in MATLAB which normalized t
 <br><i> Figure 2: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
 </p>
 
-The raw signal (top) for speaker voice shows there is a lot of data containing no information which is the silence in the recording, in addition, without the audioread that normalized the signal, the amplitudes varied between each speaker. The bottom figure shows the filtered signal after the preprocessing step that normalized the signal and removed data below -30 dB.
+The raw signal (top) for speaker 5 shows there is a lot of data containing no information, basically, the silence in the recording. In addition, without the audioread function that normalized the signal, the amplitudes varied between each speaker. The bottom figure shows the filtered signal after the preprocessing step that normalized the signal and removed data below -30 dB.
 
 This preprocessing step worked since our system produced a recognition rate of 73% which was well above our human benchmark rate established at 25%. However, after adding the additional test files for speakers 9 through 11, they tended to match with speaker 7.
 
