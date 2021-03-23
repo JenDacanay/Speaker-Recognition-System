@@ -200,27 +200,27 @@ To further test the robustness of our system, a dataset with 5 speakers and 1500
 <TABLE>
    <TR>
     <TD><b> Speaker </b></TD>
-     <TD><b> Accuracy </b></TD>
+     <TD align="center"><b> Accuracy </b></TD>
   </TR>
   <TR>
     <TD> Speaker 1 </TD>
-    <TD> 23% </TD>
+    <TD align="center"> 23% </TD>
   </TR>
   <TR>
     <TD> Speaker 2 </TD>
-    <TD> 77% </TD>
+    <TD align="center"> 77% </TD>
   </TR>
   <TR>
     <TD> Speaker 3 </TD>
-    <TD> 37% </TD>
+    <TD align="center"> 37% </TD>
   </TR>
   <TR>
     <TD> Speaker 4 </TD>
-    <TD> 66% </TD>
+    <TD align="center"> 66% </TD>
   </TR>
   <TR>
     <TD> Speaker 5 </TD>
-    <TD> 99% </TD>
+    <TD align="center"> 99% </TD>
   </TR>
   </TABLE>
   </div>
@@ -257,31 +257,31 @@ We achieved our goal to build a simple system that automatically recognized a sp
 <div align= "center">
 <TABLE>
    <TR>
-    <TD><b> Speaker Recognition Test Performed  </b></TD>
+    <TD align="center"><b> Speaker Recognition Test Performed  </b></TD>
      <TD align="center"><b> Accuracy </b></TD>
   </TR>
   <TR>
-    <TD align="center"> Human Performance </TD>
+    <TD align="left"> Human Performance </TD>
     <TD align="center"> 0% - 22% </TD>
   </TR>
   <TR>
-    <TD align="center"> Provided Data Sets - Test 1 </TD>
+    <TD align="left"> Provided Data Sets - Test 1 </TD>
     <TD align="center"> 73% </TD>
   </TR>
   <TR>
-    <TD align="center"> Adding White Gaussian Noise (with an SNR 43 dB) </TD>
+    <TD align="left"> Adding White Gaussian Noise (with an SNR 43 dB) </TD>
     <TD align="center"> 55% </TD>
   </TR>
   <TR>
-    <TD align="center"> Online Database </TD>
+    <TD align="left"> Online Database </TD>
     <TD align="center"> 23% - 99% </TD>
   </TR>
     <TR>
-    <TD align="center"> Notch Filters (6 total, 3 filters with a Q factor=20 then 3 with Q factor=10)  </TD>
+    <TD align="left"> Notch Filters (6 total, 3 filters with a Q factor=20 then 3 with Q factor=10)  </TD>
     <TD align="center"> 62% </TD>
   </TR>
     <TR>
-    <TD align="center"> Provided Data Sets (after improvements) - Test 2 </TD>
+    <TD align="left"> Provided Data Sets (after improvements) - Test 2 </TD>
     <TD align="center"> 100% </TD>
   </TR>
   </TABLE>
