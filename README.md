@@ -33,7 +33,7 @@ We performed the text-dependent feature extraction method which works best when 
 ## Implementation
 
 Our speaker recognition system was created in Matlab. To execute the speaker recognition program:
-1. Download src folder
+1. Download the "Source Code" folder.
 2. Run identifyspeaker.m
 
 ## Results
