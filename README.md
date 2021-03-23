@@ -5,11 +5,11 @@
 ## Speaker Recognition System
 
 ### Team: AudioVision  | Members: Jennifer Dacanay and Maeia Reagle
-###### Updated March 20, 2021 | EEC 201 Final Project | University of California, Davis
+###### Updated March 23, 2021 | EEC 201 Final Project | University of California, Davis
 
 ## Introduction
 
-The goal of the project was to build a simple system that automatically recognizes a speaker through the use of digital signal processing tools. This was achieved using the text-dependent feature extraction method in MATLAB using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm to generate codewords (or centroids)  and the resulting vector-quantized codebook for each speaker. The system first trains to recognize each speaker through creating a VQ codebook. To recognize a speaker, the unknown voice signal is also vector-quantized and the system calculates the VQ distortion, which is the distance between a vector to the closest codeword of a codebook. The speaker is identified when the total VQ distortion is minimum. The system recognized speakers with 100% accuracy against the provided data set, 23% to 99% accuracy from an online database set, and stopped working after lower frequencies were cut off during notch filter testing. The results were all higher than our human performance recognition rate of 0% to 22% which demonstrates the speech recognition system works. It was found that a window size of 256, a mel bank of 20, and an overlap of 100, along with 7 centroids produced the most accurate results. 
+This project aimed to build a simple system that automatically recognizes a speaker through the use of digital signal processing tools. The goal was achieved using the text-dependent feature extraction method in MATLAB using Mel-frequency Cepstrum Coefficients (MFCC), Vector Quantization (V.Q.), and the Linde, Buzo, and Gray (LBG) Algorithm to generate codewords (or centroids)  and the resulting vector-quantized codebook for each speaker. The system first trains to recognize each speaker by creating a V.Q. codebook. During testing, the unknown voice signal is also vector-quantized. The system then calculates the V.Q. distortion, which is the distance between a vector to the closest codeword of a codebook. The speaker is identified when the total V.Q. distortion is minimum. The system recognized speakers with 100% accuracy against the provided data set, 55% accuracy when adding white Gaussian noise with a signal-to-noise (SNR) ratio of 43 dB to test signals, 23% to 99% accuracy from an online database set. It stopped working after notch filters cut off lower frequencies. During notch filter testing, a total of six notch filters were applied, the first 3 with a Q factor of 20 and the last 3 with a Q factor of 10). The results were all higher than our human performance recognition rate of 0% to 25%  demonstrating our speech recognition system works. We found that the combination of a hamming window with a frame size of 256, a Mel filter bank of 20, an overlap of 100, and 7 centroids produced the most accurate results.
 
 ## Method
 
@@ -22,9 +22,9 @@ We performed the text-dependent feature extraction method which works best when 
 
 ## Training
 
-3. Plot the Mel-spectrogram after calculating its short-time fourier transform, plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal using mel-frequency wrapping.
+3. Plot the Mel-spectrogram after calculating its short-time fourier transform (STFT), plot its periodogram, which is multiplied by the mel-filter banks which transforms the signal using mel-frequency wrapping.
 4. Plot MFCCs through discrete cosine transform (DCT) on the mel-spectrogram which removes its mean.
-5. Plot the MFCCs using mfcc.m function
+5. Plot the MFCCs using `mfcc.m` function
 6. Performed vector quantization on the MFCCs, which generated codebooks for each speaker through VQ by performing the LBG algorithm. The LBG algorithm calculates the euclidean distances between centroids and MFCC.
 
 ## Testing
@@ -34,7 +34,7 @@ We performed the text-dependent feature extraction method which works best when 
 
 Our speaker recognition system was created in Matlab. To execute the speaker recognition program:
 1. Download the "Source Code" folder.
-2. Run identifyspeaker.m
+2. Run `identifyspeaker.m`
 
 ## Results
 
@@ -88,14 +88,14 @@ Preprocessing was done using the audioread function in MATLAB which normalized t
 
 <p align="center">
   <img src="/Images/s5_timedomain.JPG" alt="Time Domain s5.wav">
-<br><i> Figure 2: Raw and Filtered Signals in Time Domain for Speaker 5 .</i><br><br>
+<br><i> Figure 2: Raw and Filtered Signals in Time Domain for Speaker 5. </i><br><br>
 </p>
 
 The raw signal (top) for speaker 5 shows there is a lot of data containing no information, basically, the silence in the recording. In addition, without the audioread function that normalized the signal, the amplitudes varied between each speaker. The bottom figure shows the filtered signal after the preprocessing step that normalized the signal and removed data below -30 dB.
 
 This preprocessing step worked since our system produced a recognition rate of 73% which was well above our human benchmark rate established at 25%. However, after adding the additional test files for speakers 9 through 11, they tended to match with speaker 7.
 
-Next, we performed the short-time fourier transform on the signals by increasing the number of samples per frame, N, from 128, 256, to 512, with a frame increment approximately equaling N/3. We then plotted the periodograms in Figure 3.
+Next, we performed the short-time fourier transform on the signals and increased the number of samples per frame, N, from 128, 256, to 512, with a frame increment approximately equaling N/3. We then plotted the periodograms in Figure 3.
 
 <p align="center"> 
   <img src="/Images/periodogram128.jpg" width="311" height="290"  alt="Periodogram 128.wav"> 
@@ -105,23 +105,24 @@ Next, we performed the short-time fourier transform on the signals by increasing
 <br><i> Figure 3: Periodograms using STFT with different frame sizes.</i><br><br>
 </p>
 
-In Figure 3 (top), we can see that as the frame size increases from N = 128 to N = 512, results in less noise. This is further supported from another perspective of the periodogram with the figures at the bottom. Spectral distortion decreased as the hamming window frame size increased. Furthermore, most of the signal’s energy is found at frequencies less than 5 kHz with the highest energy within 1 kHz. The periodogram shows the signal has the most energy at lower frequencies which is in line with known speech recognition techniques where linear frequency spacing is performed at frequencies lower than 1 kHz to capture important acoustic characteristics of speech. We found that too high a window frame, here N = 512, started to filter the signal's energy, thus a hamming window frame size of 256 was chosen as it removed the spectral distortion but retained most of the signal’s energy.
+In Figure 3 (top), we can see that as the frame size increases from N = 128 to N = 512, more noise is removed but a high frame size also removes part of the signal. This is further supported from another perspective of the periodogram with the figures at the bottom. Spectral distortion decreased as the hamming window frame size increased. Furthermore, most of the signal’s energy is found at frequencies less than 5 kHz with the highest energy within 1 kHz. The periodogram shows the signal has the most energy at lower frequencies which is in line with known speech recognition techniques where linear frequency spacing is performed at frequencies lower than 1 kHz to capture important acoustic characteristics of speech. We found that too high a window frame, here N = 512, started to filter the signal's energy, thus a hamming window frame size of 256 was chosen as it removed the spectral distortion but retained the signal’s characteristics.
 
 ### Test 3
 
-The mel-spaced filterbank responses are plotted in Figure below.
+The mel-spaced filter bank responses are plotted in Figure 4 below.
 
 <p align="center"> <img src="/Images/melfilterbanks.jpg" alt="MFCC Clusters">
 <br><i> Figure 4: Mel-spaced Filter Bank Responses</i><br><br> </p>
 
 Triangular filters aren’t as effective as the theoretical rectangular bandpass filter, however, they work well enough for our purposes without adding extra complexity.
+We also modified the  mel-spaced filter bank from the provided code, as these were more linearly equally spaced, thus would result in the signals being equally multiplied.
 
 The Mel-scale aims to mimic the non-linear human ear perception of sound, by being more discriminative at lower frequencies and less discriminative at higher frequencies [7].
 
 <p align="center"> <img src="/Images/spectrum_beforenafter_mel_s5.jpg" alt="MFCC Clusters">
 <br><i> Figure 5: Spectrogram of Speech Segment from Speaker 5 Saying "zero" and the corresponding MFCCs. </i><br><br> </p>
 
-The mfcc function multiplies the raw spectrogram with the 20 mel-spaced filter banks. This quantified the smooth shape of the spectral envelope, this is important for identifying vowels. At the same time, it removed the fine spectral structure, which is less important in our application. It thus focuses on the most informative parts of the signal.
+The `mfcc.m` function multiplies the raw spectrogram with the 20 mel-spaced filter bank. This quantified the smooth shape of the spectral envelope and is important for identifying vowels. At the same time, it removed the fine spectral structure, which is less important in our application. It thus focuses on the most informative parts of the signal.
 
 ### Test 4
 
@@ -130,11 +131,11 @@ The mfcc function multiplies the raw spectrogram with the 20 mel-spaced filter b
 <br><i> Figure 6: Block diagram of MFCC processor (source: Speaker Recognition System 2020) </i>
   </p>
 
-MFCCs are computed through first computing the STFT power spectrum using Hamming window. The log of the STFT magnitude was applied to the Mel-spaced filter bank to obtain N energies. From the N energies, performed the cepstrum which is computed by taking the inverse discrete cosine transform (IDCT) of the log filter-bank energies resulting in the MFCCs (usually around 10, we chose 7 to be most efficient). 
+MFCCs are computed through first computing the STFT power spectrum using Hamming window. The log of the STFT magnitude was applied to the Mel-spaced filter bank to obtain N energies. From the N energies, performed the cepstrum which is computed by taking the discrete cosine transform (DCT) of the log filter-bank energies resulting in the MFCCs (usually around 10, but we took 12 MFCCs to be the most efficient). 
 
 ## C. Vector Quantization
 
-The closwords.m function performs vector quantization through a clustering algorithm known as the LBG algorithm on the training data set to build speaker identity references. The closwords.m function finds the euclidean distance between each point and each centroid, and then finds the minimum and sets that as the closest centroid. Then we make new centroids by taking the mean of all the closest points to each centroid, and then set those as the new centroid. We then calculate the distance between each centroid and its closest points, we repeat this process making new centroids over and over until the centroids settle by the difference in total distance from the centroids and their closest point changing less than the 'reswan' value after an iteration, as this means the centroids settled and that speakers codebook, the collection of all created centroids, has been completed.
+The `closwords.m` function performs vector quantization through a clustering algorithm known as the LBG algorithm on the training data set to build speaker identity references. The `closwords.m` function finds the euclidean distance between each point and each centroid, and then finds the minimum and sets that as the closest centroid. Then we make new centroids by taking the mean of all the closest points to each centroid, and then set those as the new centroid. We then calculate the distance between each centroid and its closest points, we repeat this process making new centroids over and over until the centroids settle by the difference in total distance from the centroids and their closest point changing less than the 'reswan' value after an iteration, as this means the centroids settled and that speakers codebook, the collection of all created centroids, has been completed.
 
 ### Test 5
 
@@ -146,9 +147,9 @@ The resulting MFCCs were plotted in a 2D plane for different speakers.
 <br><i> Figure 7: MFCC Clusters </i>
   </p>
   
-We inspected the acoustic space by plotting the 2 different MFCC vectors and observed that different speakers produced different sets of clusters. In Figure 7, speaker 4 is mostly on the negative side whereas speaker 8 is mostly on the positive side for MFCC 9 and 19.
+We inspected the acoustic space by plotting the 2 different MFCC vectors and observed that different speakers produced different sets of clusters. In Figure 7 (on the left), speaker 4 is mostly on the negative side whereas speaker 8 is mostly on the positive side for MFCC 9 and 19.
 
-Dothelifting.m function is called as such because it does the vast majority of the work. It generates the codebook and closest centroid (codeword) for each point for each speaker given as input, cs, and does so for k centroids. It also returns the final distance value for debugging purposes. It first places random centroids and sets a target change in residual value. Then the code itterates by first finding the closest centroids to each point by calling the closwords.m function.
+`Dothelifting.m` function is called as such because it does the vast majority of the work. It generates the codebook and closest centroid (codeword) for each point for each speaker given as input, cs, and does so for k centroids. It also returns the final distance value for debugging purposes. It first places random centroids and sets a target change in residual value. Then the code iterates by first finding the closest centroids to each point by calling the `closwords.m`function.
 
 ### Test 6
 
@@ -180,7 +181,7 @@ Notch filters were used on the voice signals to generate another test set. The a
 <br><i> Figure 10: Test results after 3 notch filters. </i>
 </p>
    
-After applying 3 notch filters with a Q factor of 20, the system was still succesfully recognized all speakers.
+After applying 3 notch filters with a Q factor of 20, the system still recognized all speakers.
 
 <br>
 <p align="center">
@@ -188,7 +189,7 @@ After applying 3 notch filters with a Q factor of 20, the system was still succe
 <br><i> Figure 11: Test results after 6 notch filters. </i>
 </p>
 
-Applying 3 additional notch filters with a Q factor of 10 resulted in a lower success rate.
+Applying 3 additional notch filters with a Q factor of 10 resulted in a lower success rate, 62%.
 
 ### Test 9
 
@@ -232,7 +233,7 @@ Considering the terrible quality of some of these voice captures, the fact that 
 
 ### Improvements to system
 
-A discrepancy was later found when we examined the signals in the time domain. Speakers 9, 10, and 11 had an extra stereo channel seen as orange Figure 3(a) below.
+A discrepancy was later found when we examined the signals in the time domain. Speakers 9, 10, and 11 had an extra stereo channel seen as orange Figure 12(a) below.
 
 <p align="left">
   <img src="/Images/s10_timedomains.jpg" alt="Time Domain s10.wav">
@@ -240,7 +241,7 @@ A discrepancy was later found when we examined the signals in the time domain. S
 <p align="center"> <i> Figure 12: Raw and Filtered Signals in Time Domain for Speaker 10 .</i><br><br>
 </p>
 
-After we initially pre-processed signals 9 through 11, two signals were generated as shown in Figure 3(b). After removing the extra signal during the preprocessing step shown in Figure 3(c), the filtered signal was pre-processed with desired results, Figure 3(d). Training with the revised preprocessig step allowed the total VQ distortions to be calculated correctly, resulting in an increased recognition rate from 73% to 100% out of 30 test runs.
+After we initially pre-processed signals 9 through 11, two signals were generated as shown in Figure 12(b). After removing the extra signal during the preprocessing step shown in Figure 12(c), the filtered signal was pre-processed with the desired results, Figure 12(d). Training with the revised preprocessig step allowed the total VQ distortions to be calculated correctly, resulting in an increased recognition rate from 73% to 100% out of 30 test runs.
 
 <p align="center">
   <img src="/Images/results2.jpg" alt="Test results 2"> 
@@ -257,25 +258,30 @@ We achieved our goal to build a simple system that automatically recognized a sp
 <TABLE>
    <TR>
     <TD><b> Speaker Recognition Test Performed  </b></TD>
-     <TD><b> Accuracy </b></TD>
+     <TD align="center"><b> Accuracy </b></TD>
   </TR>
   <TR>
     <TD align="center"> Human Performance </TD>
     <TD align="center"> 0% - 22% </TD>
   </TR>
   <TR>
-    <TD align="center"> Provided Data Sets - 1 </TD>
-    <TD align="center"> 97% </TD>
+    <TD align="center"> Provided Data Sets - Test 1 </TD>
+    <TD align="center"> 73% </TD>
+  </TR>
   <TR>
-    <TD align="center"> Additional Database </TD>
+    <TD align="center"> Adding White Gaussian Noise (with an SNR 43 dB) </TD>
+    <TD align="center"> 55% </TD>
+  </TR>
+  <TR>
+    <TD align="center"> Online Database </TD>
     <TD align="center"> 23% - 99% </TD>
   </TR>
     <TR>
-    <TD align="center"> Notch Filtering </TD>
-    <TD align="center"> 6 filters with a factor of Q </TD>
+    <TD align="center"> Notch Filters (6 total, 3 filters with a Q factor=20 then 3 with Q factor=10)  </TD>
+    <TD align="center"> 62% </TD>
   </TR>
     <TR>
-    <TD align="center"> Provided Data Sets - 2 </TD>
+    <TD align="center"> Provided Data Sets (after improvements) - Test 2 </TD>
     <TD align="center"> 100% </TD>
   </TR>
   </TABLE>
@@ -285,11 +291,11 @@ We achieved our goal to build a simple system that automatically recognized a sp
 <i> Table 3: Summary of Test Results </i>
 </p>
 
-#### <i> This sytem was a result of a collaborative effort throughout the whole process to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. We collaborated throughout the whole process, so neither parts were done exclusively as we relied and helped each other when either of us ran into some issues. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation while Jennifer worked on improvements in pre-processing, plotting, Github, and final report. </i>
+##### <i> This project was a result of a collaborative effort throughout the whole process to create a speech recognition system through the use of digital signal processing tools, specifically, text-dependent feature extraction using Mel-Frequency Cepstrum Coefficients (MFCC), Vector Quantization (VQ), and the Linde, Buzo, and Gray (LBG) Algorithm. We collaborated throughout the whole process, so neither parts were done exclusively as we relied and helped each other when either of us ran into some issues. The project was implemented using MATLAB, where Maeia created the preliminary complete system implementation while Jennifer worked on improvements in pre-processing, plotting, Github, and final report. </i>
 
 ### Future Works
 
-Plans for future works include implementation of the deep learning technique (DL) to test whether it will improve the robustness of the speaker recognition system against noise, creation of a graphical user interface (GUI), and system implementation in Python.
+Plans for future works include implementation of the deep learning technique (DL) to test whether it will improve the robustness of the speaker recognition system against noise, creation of a graphical user interface (GUI), system implementation in Python, and to apply these concepts toward an image classification application in Jennifer's senior design project, an autonomous inspection robot.
 
 ### Acknowledgements
 
@@ -313,7 +319,7 @@ Plans for future works include implementation of the deep learning technique (DL
  
 [6]     S. Furui, “An overview of speaker recognition technology”, ESCA Workshop on Automatic Speaker Recognition, Identification and Verification, pp. 1-9, 1994.
  
-[7]     H. Fayek https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html
+[7]     H. Fayek, "Speech Processing for Machine Learning: Filter banks, Mel-Frequency Cepstral Coefficients (MFCCs) and What's In-Between" https://haythamfayek.com/         2016/04/21/speech-processing-for-machine-learning.html
  
 [8]     F.K. Song, A.E. Rosenberg and B.H. Juang, “A vector quantisation approach to speaker recognition”, AT&T Technical Journal, Vol. 66-2, pp. 14-26, March 1987.
 
@@ -321,4 +327,4 @@ Plans for future works include implementation of the deep learning technique (DL
 
 [10]    https://en.wikipedia.org/wiki/Euclidean_distance
 
-[11]    Henry degree and tony tsoi’s code for inspiration on the input cutting, which was necessary for program to operate accurately
+[11]    Henrry degee and tony tsoi’s code for inspiration on the input cutting, which was necessary for program to operate accurately.
