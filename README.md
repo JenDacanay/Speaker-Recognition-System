@@ -262,7 +262,7 @@ We achieved our goal to build a simple system that automatically recognized a sp
   </TR>
   <TR>
     <TD align="left"> Human Performance </TD>
-    <TD align="center"> 0% - 22% </TD>
+    <TD align="center"> 0% - 25% </TD>
   </TR>
   <TR>
     <TD align="left"> Provided Data Sets - Test 1 </TD>
